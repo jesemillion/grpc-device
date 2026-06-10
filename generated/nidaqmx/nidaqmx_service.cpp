@@ -626,9 +626,9 @@ namespace nidaqmx_grpc {
       ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerWriteRaw", MonikerWriteRaw);
   }
 
-  ::grpc::Status MonikerReadAnalogF64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadAnalogF64(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadAnalogF64Data* function_data = static_cast<MonikerReadAnalogF64Data*>(data);
+    MonikerReadAnalogF64Data* function_data = static_cast<MonikerReadAnalogF64Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -656,9 +656,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadAnalogScalarF64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadAnalogScalarF64(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadAnalogScalarF64Data* function_data = static_cast<MonikerReadAnalogScalarF64Data*>(data);
+    MonikerReadAnalogScalarF64Data* function_data = static_cast<MonikerReadAnalogScalarF64Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -681,9 +681,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadBinaryI16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadBinaryI16(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadBinaryI16Data* function_data = static_cast<MonikerReadBinaryI16Data*>(data);
+    MonikerReadBinaryI16Data* function_data = static_cast<MonikerReadBinaryI16Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -719,9 +719,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadBinaryI32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadBinaryI32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadBinaryI32Data* function_data = static_cast<MonikerReadBinaryI32Data*>(data);
+    MonikerReadBinaryI32Data* function_data = static_cast<MonikerReadBinaryI32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -749,9 +749,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadBinaryU16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadBinaryU16(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadBinaryU16Data* function_data = static_cast<MonikerReadBinaryU16Data*>(data);
+    MonikerReadBinaryU16Data* function_data = static_cast<MonikerReadBinaryU16Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -787,9 +787,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadBinaryU32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadBinaryU32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadBinaryU32Data* function_data = static_cast<MonikerReadBinaryU32Data*>(data);
+    MonikerReadBinaryU32Data* function_data = static_cast<MonikerReadBinaryU32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -817,9 +817,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadCounterF64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadCounterF64(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadCounterF64Data* function_data = static_cast<MonikerReadCounterF64Data*>(data);
+    MonikerReadCounterF64Data* function_data = static_cast<MonikerReadCounterF64Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -846,9 +846,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadCounterF64Ex(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadCounterF64Ex(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadCounterF64ExData* function_data = static_cast<MonikerReadCounterF64ExData*>(data);
+    MonikerReadCounterF64ExData* function_data = static_cast<MonikerReadCounterF64ExData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -876,9 +876,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadCounterScalarF64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadCounterScalarF64(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadCounterScalarF64Data* function_data = static_cast<MonikerReadCounterScalarF64Data*>(data);
+    MonikerReadCounterScalarF64Data* function_data = static_cast<MonikerReadCounterScalarF64Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -901,9 +901,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadCounterScalarU32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadCounterScalarU32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadCounterScalarU32Data* function_data = static_cast<MonikerReadCounterScalarU32Data*>(data);
+    MonikerReadCounterScalarU32Data* function_data = static_cast<MonikerReadCounterScalarU32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -926,9 +926,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadCounterU32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadCounterU32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadCounterU32Data* function_data = static_cast<MonikerReadCounterU32Data*>(data);
+    MonikerReadCounterU32Data* function_data = static_cast<MonikerReadCounterU32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -955,9 +955,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadCounterU32Ex(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadCounterU32Ex(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadCounterU32ExData* function_data = static_cast<MonikerReadCounterU32ExData*>(data);
+    MonikerReadCounterU32ExData* function_data = static_cast<MonikerReadCounterU32ExData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -985,9 +985,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadCtrFreq(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadCtrFreq(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadCtrFreqData* function_data = static_cast<MonikerReadCtrFreqData*>(data);
+    MonikerReadCtrFreqData* function_data = static_cast<MonikerReadCtrFreqData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1017,9 +1017,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadCtrFreqScalar(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadCtrFreqScalar(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadCtrFreqScalarData* function_data = static_cast<MonikerReadCtrFreqScalarData*>(data);
+    MonikerReadCtrFreqScalarData* function_data = static_cast<MonikerReadCtrFreqScalarData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1044,9 +1044,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadCtrTicks(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadCtrTicks(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadCtrTicksData* function_data = static_cast<MonikerReadCtrTicksData*>(data);
+    MonikerReadCtrTicksData* function_data = static_cast<MonikerReadCtrTicksData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1076,9 +1076,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadCtrTicksScalar(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadCtrTicksScalar(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadCtrTicksScalarData* function_data = static_cast<MonikerReadCtrTicksScalarData*>(data);
+    MonikerReadCtrTicksScalarData* function_data = static_cast<MonikerReadCtrTicksScalarData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1103,9 +1103,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadCtrTime(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadCtrTime(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadCtrTimeData* function_data = static_cast<MonikerReadCtrTimeData*>(data);
+    MonikerReadCtrTimeData* function_data = static_cast<MonikerReadCtrTimeData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1135,9 +1135,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadCtrTimeScalar(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadCtrTimeScalar(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadCtrTimeScalarData* function_data = static_cast<MonikerReadCtrTimeScalarData*>(data);
+    MonikerReadCtrTimeScalarData* function_data = static_cast<MonikerReadCtrTimeScalarData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1162,9 +1162,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadDigitalLines(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadDigitalLines(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadDigitalLinesData* function_data = static_cast<MonikerReadDigitalLinesData*>(data);
+    MonikerReadDigitalLinesData* function_data = static_cast<MonikerReadDigitalLinesData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1194,9 +1194,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadDigitalScalarU32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadDigitalScalarU32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadDigitalScalarU32Data* function_data = static_cast<MonikerReadDigitalScalarU32Data*>(data);
+    MonikerReadDigitalScalarU32Data* function_data = static_cast<MonikerReadDigitalScalarU32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1219,9 +1219,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadDigitalU16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadDigitalU16(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadDigitalU16Data* function_data = static_cast<MonikerReadDigitalU16Data*>(data);
+    MonikerReadDigitalU16Data* function_data = static_cast<MonikerReadDigitalU16Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1257,9 +1257,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadDigitalU32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadDigitalU32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadDigitalU32Data* function_data = static_cast<MonikerReadDigitalU32Data*>(data);
+    MonikerReadDigitalU32Data* function_data = static_cast<MonikerReadDigitalU32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1287,9 +1287,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadDigitalU8(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadDigitalU8(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadDigitalU8Data* function_data = static_cast<MonikerReadDigitalU8Data*>(data);
+    MonikerReadDigitalU8Data* function_data = static_cast<MonikerReadDigitalU8Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1317,9 +1317,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadPowerBinaryI16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadPowerBinaryI16(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadPowerBinaryI16Data* function_data = static_cast<MonikerReadPowerBinaryI16Data*>(data);
+    MonikerReadPowerBinaryI16Data* function_data = static_cast<MonikerReadPowerBinaryI16Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1365,9 +1365,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadPowerF64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadPowerF64(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadPowerF64Data* function_data = static_cast<MonikerReadPowerF64Data*>(data);
+    MonikerReadPowerF64Data* function_data = static_cast<MonikerReadPowerF64Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1397,9 +1397,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadPowerScalarF64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadPowerScalarF64(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadPowerScalarF64Data* function_data = static_cast<MonikerReadPowerScalarF64Data*>(data);
+    MonikerReadPowerScalarF64Data* function_data = static_cast<MonikerReadPowerScalarF64Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1424,9 +1424,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadRaw(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadRaw(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadRawData* function_data = static_cast<MonikerReadRawData*>(data);
+    MonikerReadRawData* function_data = static_cast<MonikerReadRawData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1455,9 +1455,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWaitForNextSampleClock(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWaitForNextSampleClock(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWaitForNextSampleClockData* function_data = static_cast<MonikerWaitForNextSampleClockData*>(data);
+    MonikerWaitForNextSampleClockData* function_data = static_cast<MonikerWaitForNextSampleClockData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1479,9 +1479,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteAnalogF64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteAnalogF64(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteAnalogF64Data* function_data = static_cast<MonikerWriteAnalogF64Data*>(data);
+    MonikerWriteAnalogF64Data* function_data = static_cast<MonikerWriteAnalogF64Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1505,9 +1505,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteAnalogScalarF64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteAnalogScalarF64(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteAnalogScalarF64Data* function_data = static_cast<MonikerWriteAnalogScalarF64Data*>(data);
+    MonikerWriteAnalogScalarF64Data* function_data = static_cast<MonikerWriteAnalogScalarF64Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1528,9 +1528,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteBinaryI16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteBinaryI16(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteBinaryI16Data* function_data = static_cast<MonikerWriteBinaryI16Data*>(data);
+    MonikerWriteBinaryI16Data* function_data = static_cast<MonikerWriteBinaryI16Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1571,9 +1571,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteBinaryI32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteBinaryI32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteBinaryI32Data* function_data = static_cast<MonikerWriteBinaryI32Data*>(data);
+    MonikerWriteBinaryI32Data* function_data = static_cast<MonikerWriteBinaryI32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1597,9 +1597,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteBinaryU16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteBinaryU16(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteBinaryU16Data* function_data = static_cast<MonikerWriteBinaryU16Data*>(data);
+    MonikerWriteBinaryU16Data* function_data = static_cast<MonikerWriteBinaryU16Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1640,9 +1640,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteBinaryU32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteBinaryU32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteBinaryU32Data* function_data = static_cast<MonikerWriteBinaryU32Data*>(data);
+    MonikerWriteBinaryU32Data* function_data = static_cast<MonikerWriteBinaryU32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1666,9 +1666,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteCtrFreq(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteCtrFreq(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteCtrFreqData* function_data = static_cast<MonikerWriteCtrFreqData*>(data);
+    MonikerWriteCtrFreqData* function_data = static_cast<MonikerWriteCtrFreqData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1693,9 +1693,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteCtrFreqScalar(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteCtrFreqScalar(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteCtrFreqScalarData* function_data = static_cast<MonikerWriteCtrFreqScalarData*>(data);
+    MonikerWriteCtrFreqScalarData* function_data = static_cast<MonikerWriteCtrFreqScalarData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1717,9 +1717,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteCtrTicks(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteCtrTicks(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteCtrTicksData* function_data = static_cast<MonikerWriteCtrTicksData*>(data);
+    MonikerWriteCtrTicksData* function_data = static_cast<MonikerWriteCtrTicksData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1744,9 +1744,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteCtrTicksScalar(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteCtrTicksScalar(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteCtrTicksScalarData* function_data = static_cast<MonikerWriteCtrTicksScalarData*>(data);
+    MonikerWriteCtrTicksScalarData* function_data = static_cast<MonikerWriteCtrTicksScalarData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1768,9 +1768,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteCtrTime(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteCtrTime(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteCtrTimeData* function_data = static_cast<MonikerWriteCtrTimeData*>(data);
+    MonikerWriteCtrTimeData* function_data = static_cast<MonikerWriteCtrTimeData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1795,9 +1795,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteCtrTimeScalar(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteCtrTimeScalar(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteCtrTimeScalarData* function_data = static_cast<MonikerWriteCtrTimeScalarData*>(data);
+    MonikerWriteCtrTimeScalarData* function_data = static_cast<MonikerWriteCtrTimeScalarData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1819,9 +1819,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteDigitalLines(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteDigitalLines(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteDigitalLinesData* function_data = static_cast<MonikerWriteDigitalLinesData*>(data);
+    MonikerWriteDigitalLinesData* function_data = static_cast<MonikerWriteDigitalLinesData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1845,9 +1845,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteDigitalScalarU32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteDigitalScalarU32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteDigitalScalarU32Data* function_data = static_cast<MonikerWriteDigitalScalarU32Data*>(data);
+    MonikerWriteDigitalScalarU32Data* function_data = static_cast<MonikerWriteDigitalScalarU32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1868,9 +1868,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteDigitalU16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteDigitalU16(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteDigitalU16Data* function_data = static_cast<MonikerWriteDigitalU16Data*>(data);
+    MonikerWriteDigitalU16Data* function_data = static_cast<MonikerWriteDigitalU16Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1911,9 +1911,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteDigitalU32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteDigitalU32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteDigitalU32Data* function_data = static_cast<MonikerWriteDigitalU32Data*>(data);
+    MonikerWriteDigitalU32Data* function_data = static_cast<MonikerWriteDigitalU32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1937,9 +1937,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteDigitalU8(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteDigitalU8(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteDigitalU8Data* function_data = static_cast<MonikerWriteDigitalU8Data*>(data);
+    MonikerWriteDigitalU8Data* function_data = static_cast<MonikerWriteDigitalU8Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;
@@ -1963,9 +1963,9 @@ namespace nidaqmx_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteRaw(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteRaw(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteRawData* function_data = static_cast<MonikerWriteRawData*>(data);
+    MonikerWriteRawData* function_data = static_cast<MonikerWriteRawData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto task = function_data->task;

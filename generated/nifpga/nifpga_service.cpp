@@ -717,9 +717,9 @@ namespace nifpga_grpc {
       ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerWriteU8", MonikerWriteU8);
   }
 
-  ::grpc::Status MonikerReadArrayBool(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadArrayBool(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadArrayBoolData* function_data = static_cast<MonikerReadArrayBoolData*>(data);
+    MonikerReadArrayBoolData* function_data = static_cast<MonikerReadArrayBoolData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -742,9 +742,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadArrayDbl(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadArrayDbl(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadArrayDblData* function_data = static_cast<MonikerReadArrayDblData*>(data);
+    MonikerReadArrayDblData* function_data = static_cast<MonikerReadArrayDblData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -767,9 +767,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadArrayI16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadArrayI16(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadArrayI16Data* function_data = static_cast<MonikerReadArrayI16Data*>(data);
+    MonikerReadArrayI16Data* function_data = static_cast<MonikerReadArrayI16Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -800,9 +800,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadArrayI32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadArrayI32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadArrayI32Data* function_data = static_cast<MonikerReadArrayI32Data*>(data);
+    MonikerReadArrayI32Data* function_data = static_cast<MonikerReadArrayI32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -825,9 +825,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadArrayI64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadArrayI64(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadArrayI64Data* function_data = static_cast<MonikerReadArrayI64Data*>(data);
+    MonikerReadArrayI64Data* function_data = static_cast<MonikerReadArrayI64Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -850,9 +850,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadArrayI8(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadArrayI8(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadArrayI8Data* function_data = static_cast<MonikerReadArrayI8Data*>(data);
+    MonikerReadArrayI8Data* function_data = static_cast<MonikerReadArrayI8Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -883,9 +883,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadArraySgl(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadArraySgl(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadArraySglData* function_data = static_cast<MonikerReadArraySglData*>(data);
+    MonikerReadArraySglData* function_data = static_cast<MonikerReadArraySglData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -908,9 +908,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadArrayU16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadArrayU16(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadArrayU16Data* function_data = static_cast<MonikerReadArrayU16Data*>(data);
+    MonikerReadArrayU16Data* function_data = static_cast<MonikerReadArrayU16Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -941,9 +941,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadArrayU32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadArrayU32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadArrayU32Data* function_data = static_cast<MonikerReadArrayU32Data*>(data);
+    MonikerReadArrayU32Data* function_data = static_cast<MonikerReadArrayU32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -966,9 +966,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadArrayU64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadArrayU64(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadArrayU64Data* function_data = static_cast<MonikerReadArrayU64Data*>(data);
+    MonikerReadArrayU64Data* function_data = static_cast<MonikerReadArrayU64Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -991,9 +991,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadArrayU8(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadArrayU8(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadArrayU8Data* function_data = static_cast<MonikerReadArrayU8Data*>(data);
+    MonikerReadArrayU8Data* function_data = static_cast<MonikerReadArrayU8Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1024,9 +1024,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadBool(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadBool(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadBoolData* function_data = static_cast<MonikerReadBoolData*>(data);
+    MonikerReadBoolData* function_data = static_cast<MonikerReadBoolData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1048,9 +1048,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadDbl(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadDbl(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadDblData* function_data = static_cast<MonikerReadDblData*>(data);
+    MonikerReadDblData* function_data = static_cast<MonikerReadDblData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1072,9 +1072,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadFifoBool(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadFifoBool(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadFifoBoolData* function_data = static_cast<MonikerReadFifoBoolData*>(data);
+    MonikerReadFifoBoolData* function_data = static_cast<MonikerReadFifoBoolData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1100,9 +1100,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadFifoDbl(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadFifoDbl(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadFifoDblData* function_data = static_cast<MonikerReadFifoDblData*>(data);
+    MonikerReadFifoDblData* function_data = static_cast<MonikerReadFifoDblData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1128,9 +1128,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadFifoI16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadFifoI16(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadFifoI16Data* function_data = static_cast<MonikerReadFifoI16Data*>(data);
+    MonikerReadFifoI16Data* function_data = static_cast<MonikerReadFifoI16Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1164,9 +1164,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadFifoI32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadFifoI32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadFifoI32Data* function_data = static_cast<MonikerReadFifoI32Data*>(data);
+    MonikerReadFifoI32Data* function_data = static_cast<MonikerReadFifoI32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1192,9 +1192,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadFifoI64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadFifoI64(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadFifoI64Data* function_data = static_cast<MonikerReadFifoI64Data*>(data);
+    MonikerReadFifoI64Data* function_data = static_cast<MonikerReadFifoI64Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1220,9 +1220,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadFifoI8(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadFifoI8(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadFifoI8Data* function_data = static_cast<MonikerReadFifoI8Data*>(data);
+    MonikerReadFifoI8Data* function_data = static_cast<MonikerReadFifoI8Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1256,9 +1256,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadFifoSgl(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadFifoSgl(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadFifoSglData* function_data = static_cast<MonikerReadFifoSglData*>(data);
+    MonikerReadFifoSglData* function_data = static_cast<MonikerReadFifoSglData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1284,9 +1284,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadFifoU16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadFifoU16(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadFifoU16Data* function_data = static_cast<MonikerReadFifoU16Data*>(data);
+    MonikerReadFifoU16Data* function_data = static_cast<MonikerReadFifoU16Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1320,9 +1320,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadFifoU32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadFifoU32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadFifoU32Data* function_data = static_cast<MonikerReadFifoU32Data*>(data);
+    MonikerReadFifoU32Data* function_data = static_cast<MonikerReadFifoU32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1348,9 +1348,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadFifoU64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadFifoU64(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadFifoU64Data* function_data = static_cast<MonikerReadFifoU64Data*>(data);
+    MonikerReadFifoU64Data* function_data = static_cast<MonikerReadFifoU64Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1376,9 +1376,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadFifoU8(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadFifoU8(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadFifoU8Data* function_data = static_cast<MonikerReadFifoU8Data*>(data);
+    MonikerReadFifoU8Data* function_data = static_cast<MonikerReadFifoU8Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1412,9 +1412,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadI16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadI16(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadI16Data* function_data = static_cast<MonikerReadI16Data*>(data);
+    MonikerReadI16Data* function_data = static_cast<MonikerReadI16Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1436,9 +1436,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadI32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadI32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadI32Data* function_data = static_cast<MonikerReadI32Data*>(data);
+    MonikerReadI32Data* function_data = static_cast<MonikerReadI32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1460,9 +1460,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadI64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadI64(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadI64Data* function_data = static_cast<MonikerReadI64Data*>(data);
+    MonikerReadI64Data* function_data = static_cast<MonikerReadI64Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1484,9 +1484,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadI8(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadI8(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadI8Data* function_data = static_cast<MonikerReadI8Data*>(data);
+    MonikerReadI8Data* function_data = static_cast<MonikerReadI8Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1508,9 +1508,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadSgl(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadSgl(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadSglData* function_data = static_cast<MonikerReadSglData*>(data);
+    MonikerReadSglData* function_data = static_cast<MonikerReadSglData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1532,9 +1532,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadU16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadU16(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadU16Data* function_data = static_cast<MonikerReadU16Data*>(data);
+    MonikerReadU16Data* function_data = static_cast<MonikerReadU16Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1556,9 +1556,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadU32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadU32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadU32Data* function_data = static_cast<MonikerReadU32Data*>(data);
+    MonikerReadU32Data* function_data = static_cast<MonikerReadU32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1580,9 +1580,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadU64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadU64(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadU64Data* function_data = static_cast<MonikerReadU64Data*>(data);
+    MonikerReadU64Data* function_data = static_cast<MonikerReadU64Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1604,9 +1604,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerReadU8(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerReadU8(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerReadU8Data* function_data = static_cast<MonikerReadU8Data*>(data);
+    MonikerReadU8Data* function_data = static_cast<MonikerReadU8Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1628,9 +1628,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteArrayBool(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteArrayBool(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteArrayBoolData* function_data = static_cast<MonikerWriteArrayBoolData*>(data);
+    MonikerWriteArrayBoolData* function_data = static_cast<MonikerWriteArrayBoolData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1650,9 +1650,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteArrayDbl(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteArrayDbl(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteArrayDblData* function_data = static_cast<MonikerWriteArrayDblData*>(data);
+    MonikerWriteArrayDblData* function_data = static_cast<MonikerWriteArrayDblData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1672,9 +1672,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteArrayI16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteArrayI16(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteArrayI16Data* function_data = static_cast<MonikerWriteArrayI16Data*>(data);
+    MonikerWriteArrayI16Data* function_data = static_cast<MonikerWriteArrayI16Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1711,9 +1711,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteArrayI32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteArrayI32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteArrayI32Data* function_data = static_cast<MonikerWriteArrayI32Data*>(data);
+    MonikerWriteArrayI32Data* function_data = static_cast<MonikerWriteArrayI32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1733,9 +1733,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteArrayI64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteArrayI64(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteArrayI64Data* function_data = static_cast<MonikerWriteArrayI64Data*>(data);
+    MonikerWriteArrayI64Data* function_data = static_cast<MonikerWriteArrayI64Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1755,9 +1755,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteArrayI8(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteArrayI8(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteArrayI8Data* function_data = static_cast<MonikerWriteArrayI8Data*>(data);
+    MonikerWriteArrayI8Data* function_data = static_cast<MonikerWriteArrayI8Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1794,9 +1794,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteArraySgl(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteArraySgl(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteArraySglData* function_data = static_cast<MonikerWriteArraySglData*>(data);
+    MonikerWriteArraySglData* function_data = static_cast<MonikerWriteArraySglData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1816,9 +1816,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteArrayU16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteArrayU16(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteArrayU16Data* function_data = static_cast<MonikerWriteArrayU16Data*>(data);
+    MonikerWriteArrayU16Data* function_data = static_cast<MonikerWriteArrayU16Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1855,9 +1855,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteArrayU32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteArrayU32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteArrayU32Data* function_data = static_cast<MonikerWriteArrayU32Data*>(data);
+    MonikerWriteArrayU32Data* function_data = static_cast<MonikerWriteArrayU32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1877,9 +1877,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteArrayU64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteArrayU64(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteArrayU64Data* function_data = static_cast<MonikerWriteArrayU64Data*>(data);
+    MonikerWriteArrayU64Data* function_data = static_cast<MonikerWriteArrayU64Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1899,9 +1899,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteArrayU8(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteArrayU8(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteArrayU8Data* function_data = static_cast<MonikerWriteArrayU8Data*>(data);
+    MonikerWriteArrayU8Data* function_data = static_cast<MonikerWriteArrayU8Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1938,9 +1938,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteBool(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteBool(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteBoolData* function_data = static_cast<MonikerWriteBoolData*>(data);
+    MonikerWriteBoolData* function_data = static_cast<MonikerWriteBoolData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1959,9 +1959,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteDbl(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteDbl(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteDblData* function_data = static_cast<MonikerWriteDblData*>(data);
+    MonikerWriteDblData* function_data = static_cast<MonikerWriteDblData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -1980,9 +1980,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteFifoBool(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteFifoBool(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteFifoBoolData* function_data = static_cast<MonikerWriteFifoBoolData*>(data);
+    MonikerWriteFifoBoolData* function_data = static_cast<MonikerWriteFifoBoolData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -2004,9 +2004,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteFifoDbl(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteFifoDbl(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteFifoDblData* function_data = static_cast<MonikerWriteFifoDblData*>(data);
+    MonikerWriteFifoDblData* function_data = static_cast<MonikerWriteFifoDblData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -2028,9 +2028,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteFifoI16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteFifoI16(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteFifoI16Data* function_data = static_cast<MonikerWriteFifoI16Data*>(data);
+    MonikerWriteFifoI16Data* function_data = static_cast<MonikerWriteFifoI16Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -2069,9 +2069,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteFifoI32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteFifoI32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteFifoI32Data* function_data = static_cast<MonikerWriteFifoI32Data*>(data);
+    MonikerWriteFifoI32Data* function_data = static_cast<MonikerWriteFifoI32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -2093,9 +2093,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteFifoI64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteFifoI64(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteFifoI64Data* function_data = static_cast<MonikerWriteFifoI64Data*>(data);
+    MonikerWriteFifoI64Data* function_data = static_cast<MonikerWriteFifoI64Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -2117,9 +2117,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteFifoI8(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteFifoI8(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteFifoI8Data* function_data = static_cast<MonikerWriteFifoI8Data*>(data);
+    MonikerWriteFifoI8Data* function_data = static_cast<MonikerWriteFifoI8Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -2158,9 +2158,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteFifoSgl(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteFifoSgl(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteFifoSglData* function_data = static_cast<MonikerWriteFifoSglData*>(data);
+    MonikerWriteFifoSglData* function_data = static_cast<MonikerWriteFifoSglData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -2182,9 +2182,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteFifoU16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteFifoU16(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteFifoU16Data* function_data = static_cast<MonikerWriteFifoU16Data*>(data);
+    MonikerWriteFifoU16Data* function_data = static_cast<MonikerWriteFifoU16Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -2223,9 +2223,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteFifoU32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteFifoU32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteFifoU32Data* function_data = static_cast<MonikerWriteFifoU32Data*>(data);
+    MonikerWriteFifoU32Data* function_data = static_cast<MonikerWriteFifoU32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -2247,9 +2247,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteFifoU64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteFifoU64(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteFifoU64Data* function_data = static_cast<MonikerWriteFifoU64Data*>(data);
+    MonikerWriteFifoU64Data* function_data = static_cast<MonikerWriteFifoU64Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -2271,9 +2271,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteFifoU8(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteFifoU8(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteFifoU8Data* function_data = static_cast<MonikerWriteFifoU8Data*>(data);
+    MonikerWriteFifoU8Data* function_data = static_cast<MonikerWriteFifoU8Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -2312,9 +2312,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteI16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteI16(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteI16Data* function_data = static_cast<MonikerWriteI16Data*>(data);
+    MonikerWriteI16Data* function_data = static_cast<MonikerWriteI16Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -2342,9 +2342,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteI32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteI32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteI32Data* function_data = static_cast<MonikerWriteI32Data*>(data);
+    MonikerWriteI32Data* function_data = static_cast<MonikerWriteI32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -2363,9 +2363,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteI64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteI64(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteI64Data* function_data = static_cast<MonikerWriteI64Data*>(data);
+    MonikerWriteI64Data* function_data = static_cast<MonikerWriteI64Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -2384,9 +2384,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteI8(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteI8(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteI8Data* function_data = static_cast<MonikerWriteI8Data*>(data);
+    MonikerWriteI8Data* function_data = static_cast<MonikerWriteI8Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -2414,9 +2414,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteSgl(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteSgl(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteSglData* function_data = static_cast<MonikerWriteSglData*>(data);
+    MonikerWriteSglData* function_data = static_cast<MonikerWriteSglData*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -2435,9 +2435,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteU16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteU16(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteU16Data* function_data = static_cast<MonikerWriteU16Data*>(data);
+    MonikerWriteU16Data* function_data = static_cast<MonikerWriteU16Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -2465,9 +2465,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteU32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteU32(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteU32Data* function_data = static_cast<MonikerWriteU32Data*>(data);
+    MonikerWriteU32Data* function_data = static_cast<MonikerWriteU32Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -2486,9 +2486,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteU64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteU64(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteU64Data* function_data = static_cast<MonikerWriteU64Data*>(data);
+    MonikerWriteU64Data* function_data = static_cast<MonikerWriteU64Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
@@ -2507,9 +2507,9 @@ namespace nifpga_grpc {
     return ::grpc::Status::OK;
   }
 
-  ::grpc::Status MonikerWriteU8(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status MonikerWriteU8(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    MonikerWriteU8Data* function_data = static_cast<MonikerWriteU8Data*>(data);
+    MonikerWriteU8Data* function_data = static_cast<MonikerWriteU8Data*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
     auto session = function_data->session;
