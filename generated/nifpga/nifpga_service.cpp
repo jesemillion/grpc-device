@@ -137,6 +137,116 @@ namespace nifpga_grpc {
      std::shared_ptr<NiFpgaLibraryInterface> library;
   };
 
+  struct MonikerReadFifoBoolData
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     size_t number_of_elements;
+     uint32_t timeout;
+     nifpga_grpc::MonikerReadFifoBoolResponse response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
+  struct MonikerReadFifoDblData
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     size_t number_of_elements;
+     uint32_t timeout;
+     nifpga_grpc::MonikerReadFifoDblResponse response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
+  struct MonikerReadFifoI16Data
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     size_t number_of_elements;
+     uint32_t timeout;
+     nifpga_grpc::MonikerReadFifoI16Response response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
+  struct MonikerReadFifoI32Data
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     size_t number_of_elements;
+     uint32_t timeout;
+     nifpga_grpc::MonikerReadFifoI32Response response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
+  struct MonikerReadFifoI64Data
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     size_t number_of_elements;
+     uint32_t timeout;
+     nifpga_grpc::MonikerReadFifoI64Response response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
+  struct MonikerReadFifoI8Data
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     size_t number_of_elements;
+     uint32_t timeout;
+     nifpga_grpc::MonikerReadFifoI8Response response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
+  struct MonikerReadFifoSglData
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     size_t number_of_elements;
+     uint32_t timeout;
+     nifpga_grpc::MonikerReadFifoSglResponse response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
+  struct MonikerReadFifoU16Data
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     size_t number_of_elements;
+     uint32_t timeout;
+     nifpga_grpc::MonikerReadFifoU16Response response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
+  struct MonikerReadFifoU32Data
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     size_t number_of_elements;
+     uint32_t timeout;
+     nifpga_grpc::MonikerReadFifoU32Response response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
+  struct MonikerReadFifoU64Data
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     size_t number_of_elements;
+     uint32_t timeout;
+     nifpga_grpc::MonikerReadFifoU64Response response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
+  struct MonikerReadFifoU8Data
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     size_t number_of_elements;
+     uint32_t timeout;
+     nifpga_grpc::MonikerReadFifoU8Response response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
   struct MonikerReadI16Data
   {
      NiFpga_Session session;
@@ -326,6 +436,116 @@ namespace nifpga_grpc {
      std::shared_ptr<NiFpgaLibraryInterface> library;
   };
 
+  struct MonikerWriteFifoBoolData
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     uint32_t timeout;
+     nifpga_grpc::MonikerWriteFifoBoolRequest request;
+     nifpga_grpc::MonikerWriteFifoBoolResponse response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
+  struct MonikerWriteFifoDblData
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     uint32_t timeout;
+     nifpga_grpc::MonikerWriteFifoDblRequest request;
+     nifpga_grpc::MonikerWriteFifoDblResponse response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
+  struct MonikerWriteFifoI16Data
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     uint32_t timeout;
+     nifpga_grpc::MonikerWriteFifoI16Request request;
+     nifpga_grpc::MonikerWriteFifoI16Response response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
+  struct MonikerWriteFifoI32Data
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     uint32_t timeout;
+     nifpga_grpc::MonikerWriteFifoI32Request request;
+     nifpga_grpc::MonikerWriteFifoI32Response response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
+  struct MonikerWriteFifoI64Data
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     uint32_t timeout;
+     nifpga_grpc::MonikerWriteFifoI64Request request;
+     nifpga_grpc::MonikerWriteFifoI64Response response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
+  struct MonikerWriteFifoI8Data
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     uint32_t timeout;
+     nifpga_grpc::MonikerWriteFifoI8Request request;
+     nifpga_grpc::MonikerWriteFifoI8Response response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
+  struct MonikerWriteFifoSglData
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     uint32_t timeout;
+     nifpga_grpc::MonikerWriteFifoSglRequest request;
+     nifpga_grpc::MonikerWriteFifoSglResponse response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
+  struct MonikerWriteFifoU16Data
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     uint32_t timeout;
+     nifpga_grpc::MonikerWriteFifoU16Request request;
+     nifpga_grpc::MonikerWriteFifoU16Response response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
+  struct MonikerWriteFifoU32Data
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     uint32_t timeout;
+     nifpga_grpc::MonikerWriteFifoU32Request request;
+     nifpga_grpc::MonikerWriteFifoU32Response response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
+  struct MonikerWriteFifoU64Data
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     uint32_t timeout;
+     nifpga_grpc::MonikerWriteFifoU64Request request;
+     nifpga_grpc::MonikerWriteFifoU64Response response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
+  struct MonikerWriteFifoU8Data
+  {
+     NiFpga_Session session;
+     uint32_t fifo;
+     uint32_t timeout;
+     nifpga_grpc::MonikerWriteFifoU8Request request;
+     nifpga_grpc::MonikerWriteFifoU8Response response;
+     std::shared_ptr<NiFpgaLibraryInterface> library;
+  };
+
   struct MonikerWriteI16Data
   {
      NiFpga_Session session;
@@ -442,6 +662,17 @@ namespace nifpga_grpc {
       ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerReadArrayU8", MonikerReadArrayU8);
       ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerReadBool", MonikerReadBool);
       ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerReadDbl", MonikerReadDbl);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerReadFifoBool", MonikerReadFifoBool);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerReadFifoDbl", MonikerReadFifoDbl);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerReadFifoI16", MonikerReadFifoI16);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerReadFifoI32", MonikerReadFifoI32);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerReadFifoI64", MonikerReadFifoI64);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerReadFifoI8", MonikerReadFifoI8);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerReadFifoSgl", MonikerReadFifoSgl);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerReadFifoU16", MonikerReadFifoU16);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerReadFifoU32", MonikerReadFifoU32);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerReadFifoU64", MonikerReadFifoU64);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerReadFifoU8", MonikerReadFifoU8);
       ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerReadI16", MonikerReadI16);
       ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerReadI32", MonikerReadI32);
       ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerReadI64", MonikerReadI64);
@@ -464,6 +695,17 @@ namespace nifpga_grpc {
       ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerWriteArrayU8", MonikerWriteArrayU8);
       ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerWriteBool", MonikerWriteBool);
       ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerWriteDbl", MonikerWriteDbl);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerWriteFifoBool", MonikerWriteFifoBool);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerWriteFifoDbl", MonikerWriteFifoDbl);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerWriteFifoI16", MonikerWriteFifoI16);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerWriteFifoI32", MonikerWriteFifoI32);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerWriteFifoI64", MonikerWriteFifoI64);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerWriteFifoI8", MonikerWriteFifoI8);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerWriteFifoSgl", MonikerWriteFifoSgl);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerWriteFifoU16", MonikerWriteFifoU16);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerWriteFifoU32", MonikerWriteFifoU32);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerWriteFifoU64", MonikerWriteFifoU64);
+      ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerWriteFifoU8", MonikerWriteFifoU8);
       ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerWriteI16", MonikerWriteI16);
       ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerWriteI32", MonikerWriteI32);
       ni::data_monikers::DataMonikerService::RegisterMonikerEndpoint("MonikerWriteI64", MonikerWriteI64);
@@ -821,6 +1063,346 @@ namespace nifpga_grpc {
     {
       response->set_status(status);
       response->set_value(value);
+      packedData.PackFrom(*response);
+    }
+    else
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerReadFifoBool(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerReadFifoBoolData* function_data = static_cast<MonikerReadFifoBoolData*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto number_of_elements = function_data->number_of_elements;
+    auto timeout = function_data->timeout;
+    std::vector<NiFpga_Bool> data(number_of_elements, NiFpga_Bool());
+    size_t elements_remaining {};
+
+    auto status = library->ReadFifoBool(session, fifo, data.data(), number_of_elements, timeout, &elements_remaining);
+
+    if (status >= 0)
+    {
+      response->set_status(status);
+      convert_to_grpc(data, response->mutable_data());
+      response->set_elements_remaining(elements_remaining);
+      packedData.PackFrom(*response);
+    }
+    else
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerReadFifoDbl(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerReadFifoDblData* function_data = static_cast<MonikerReadFifoDblData*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto number_of_elements = function_data->number_of_elements;
+    auto timeout = function_data->timeout;
+    response->mutable_data()->Resize(number_of_elements, 0);
+    double* data = response->mutable_data()->mutable_data();
+    size_t elements_remaining {};
+
+    auto status = library->ReadFifoDbl(session, fifo, data, number_of_elements, timeout, &elements_remaining);
+
+    if (status >= 0)
+    {
+      response->set_status(status);
+      response->set_elements_remaining(elements_remaining);
+      packedData.PackFrom(*response);
+    }
+    else
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerReadFifoI16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerReadFifoI16Data* function_data = static_cast<MonikerReadFifoI16Data*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto number_of_elements = function_data->number_of_elements;
+    auto timeout = function_data->timeout;
+    std::vector<int16_t> data(number_of_elements);
+    size_t elements_remaining {};
+
+    auto status = library->ReadFifoI16(session, fifo, data.data(), number_of_elements, timeout, &elements_remaining);
+
+    if (status >= 0)
+    {
+      response->set_status(status);
+      response->mutable_data()->Clear();
+      response->mutable_data()->Reserve(number_of_elements);
+      std::transform(
+        data.begin(),
+        data.begin() + number_of_elements,
+        google::protobuf::RepeatedFieldBackInserter(response->mutable_data()),
+        [&](auto x) {
+            return x;
+        });
+      response->set_elements_remaining(elements_remaining);
+      packedData.PackFrom(*response);
+    }
+    else
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerReadFifoI32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerReadFifoI32Data* function_data = static_cast<MonikerReadFifoI32Data*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto number_of_elements = function_data->number_of_elements;
+    auto timeout = function_data->timeout;
+    response->mutable_data()->Resize(number_of_elements, 0);
+    int32_t* data = response->mutable_data()->mutable_data();
+    size_t elements_remaining {};
+
+    auto status = library->ReadFifoI32(session, fifo, data, number_of_elements, timeout, &elements_remaining);
+
+    if (status >= 0)
+    {
+      response->set_status(status);
+      response->set_elements_remaining(elements_remaining);
+      packedData.PackFrom(*response);
+    }
+    else
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerReadFifoI64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerReadFifoI64Data* function_data = static_cast<MonikerReadFifoI64Data*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto number_of_elements = function_data->number_of_elements;
+    auto timeout = function_data->timeout;
+    response->mutable_data()->Resize(number_of_elements, 0);
+    int64_t* data = response->mutable_data()->mutable_data();
+    size_t elements_remaining {};
+
+    auto status = library->ReadFifoI64(session, fifo, data, number_of_elements, timeout, &elements_remaining);
+
+    if (status >= 0)
+    {
+      response->set_status(status);
+      response->set_elements_remaining(elements_remaining);
+      packedData.PackFrom(*response);
+    }
+    else
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerReadFifoI8(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerReadFifoI8Data* function_data = static_cast<MonikerReadFifoI8Data*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto number_of_elements = function_data->number_of_elements;
+    auto timeout = function_data->timeout;
+    std::vector<int8_t> data(number_of_elements);
+    size_t elements_remaining {};
+
+    auto status = library->ReadFifoI8(session, fifo, data.data(), number_of_elements, timeout, &elements_remaining);
+
+    if (status >= 0)
+    {
+      response->set_status(status);
+      response->mutable_data()->Clear();
+      response->mutable_data()->Reserve(number_of_elements);
+      std::transform(
+        data.begin(),
+        data.begin() + number_of_elements,
+        google::protobuf::RepeatedFieldBackInserter(response->mutable_data()),
+        [&](auto x) {
+            return x;
+        });
+      response->set_elements_remaining(elements_remaining);
+      packedData.PackFrom(*response);
+    }
+    else
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerReadFifoSgl(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerReadFifoSglData* function_data = static_cast<MonikerReadFifoSglData*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto number_of_elements = function_data->number_of_elements;
+    auto timeout = function_data->timeout;
+    response->mutable_data()->Resize(number_of_elements, 0);
+    float* data = response->mutable_data()->mutable_data();
+    size_t elements_remaining {};
+
+    auto status = library->ReadFifoSgl(session, fifo, data, number_of_elements, timeout, &elements_remaining);
+
+    if (status >= 0)
+    {
+      response->set_status(status);
+      response->set_elements_remaining(elements_remaining);
+      packedData.PackFrom(*response);
+    }
+    else
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerReadFifoU16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerReadFifoU16Data* function_data = static_cast<MonikerReadFifoU16Data*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto number_of_elements = function_data->number_of_elements;
+    auto timeout = function_data->timeout;
+    std::vector<uint16_t> data(number_of_elements);
+    size_t elements_remaining {};
+
+    auto status = library->ReadFifoU16(session, fifo, data.data(), number_of_elements, timeout, &elements_remaining);
+
+    if (status >= 0)
+    {
+      response->set_status(status);
+      response->mutable_data()->Clear();
+      response->mutable_data()->Reserve(number_of_elements);
+      std::transform(
+        data.begin(),
+        data.begin() + number_of_elements,
+        google::protobuf::RepeatedFieldBackInserter(response->mutable_data()),
+        [&](auto x) {
+            return x;
+        });
+      response->set_elements_remaining(elements_remaining);
+      packedData.PackFrom(*response);
+    }
+    else
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerReadFifoU32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerReadFifoU32Data* function_data = static_cast<MonikerReadFifoU32Data*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto number_of_elements = function_data->number_of_elements;
+    auto timeout = function_data->timeout;
+    response->mutable_data()->Resize(number_of_elements, 0);
+    uint32_t* data = response->mutable_data()->mutable_data();
+    size_t elements_remaining {};
+
+    auto status = library->ReadFifoU32(session, fifo, data, number_of_elements, timeout, &elements_remaining);
+
+    if (status >= 0)
+    {
+      response->set_status(status);
+      response->set_elements_remaining(elements_remaining);
+      packedData.PackFrom(*response);
+    }
+    else
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerReadFifoU64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerReadFifoU64Data* function_data = static_cast<MonikerReadFifoU64Data*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto number_of_elements = function_data->number_of_elements;
+    auto timeout = function_data->timeout;
+    response->mutable_data()->Resize(number_of_elements, 0);
+    uint64_t* data = response->mutable_data()->mutable_data();
+    size_t elements_remaining {};
+
+    auto status = library->ReadFifoU64(session, fifo, data, number_of_elements, timeout, &elements_remaining);
+
+    if (status >= 0)
+    {
+      response->set_status(status);
+      response->set_elements_remaining(elements_remaining);
+      packedData.PackFrom(*response);
+    }
+    else
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerReadFifoU8(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerReadFifoU8Data* function_data = static_cast<MonikerReadFifoU8Data*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto number_of_elements = function_data->number_of_elements;
+    auto timeout = function_data->timeout;
+    std::vector<uint8_t> data(number_of_elements);
+    size_t elements_remaining {};
+
+    auto status = library->ReadFifoU8(session, fifo, data.data(), number_of_elements, timeout, &elements_remaining);
+
+    if (status >= 0)
+    {
+      response->set_status(status);
+      response->mutable_data()->Clear();
+      response->mutable_data()->Reserve(number_of_elements);
+      std::transform(
+        data.begin(),
+        data.begin() + number_of_elements,
+        google::protobuf::RepeatedFieldBackInserter(response->mutable_data()),
+        [&](auto x) {
+            return x;
+        });
+      response->set_elements_remaining(elements_remaining);
       packedData.PackFrom(*response);
     }
     else
@@ -1390,6 +1972,338 @@ namespace nifpga_grpc {
     double value = request->value();
 
     auto status = library->WriteDbl(session, control, value);
+
+    if (status < 0)
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerWriteFifoBool(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerWriteFifoBoolData* function_data = static_cast<MonikerWriteFifoBoolData*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto timeout = function_data->timeout;
+    auto request = &function_data->request;
+
+    packedData.UnpackTo(request);
+    auto data = convert_from_grpc<NiFpga_Bool>(request->data());
+    size_t number_of_elements = static_cast<size_t>(request->data().size());
+    size_t empty_elements_remaining {};
+
+    auto status = library->WriteFifoBool(session, fifo, data.data(), number_of_elements, timeout, &empty_elements_remaining);
+
+    if (status < 0)
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerWriteFifoDbl(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerWriteFifoDblData* function_data = static_cast<MonikerWriteFifoDblData*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto timeout = function_data->timeout;
+    auto request = &function_data->request;
+
+    packedData.UnpackTo(request);
+    auto data = const_cast<double*>(request->data().data());
+    size_t number_of_elements = static_cast<size_t>(request->data().size());
+    size_t empty_elements_remaining {};
+
+    auto status = library->WriteFifoDbl(session, fifo, data, number_of_elements, timeout, &empty_elements_remaining);
+
+    if (status < 0)
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerWriteFifoI16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerWriteFifoI16Data* function_data = static_cast<MonikerWriteFifoI16Data*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto timeout = function_data->timeout;
+    auto request = &function_data->request;
+
+    packedData.UnpackTo(request);
+    auto data_raw = request->data();
+    auto data = std::vector<int16_t>();
+    data.reserve(data_raw.size());
+    std::transform(
+      data_raw.begin(),
+      data_raw.end(),
+      std::back_inserter(data),
+      [](auto x) {
+            if (x < std::numeric_limits<int16_t>::min() || x > std::numeric_limits<int16_t>::max()) {
+                std::string message("value ");
+                message.append(std::to_string(x));
+                message.append(" doesn't fit in datatype ");
+                message.append("int16_t");
+                throw nidevice_grpc::ValueOutOfRangeException(message);
+            }
+            return static_cast<int16_t>(x);
+      });
+
+    size_t number_of_elements = static_cast<size_t>(request->data().size());
+    size_t empty_elements_remaining {};
+
+    auto status = library->WriteFifoI16(session, fifo, data.data(), number_of_elements, timeout, &empty_elements_remaining);
+
+    if (status < 0)
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerWriteFifoI32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerWriteFifoI32Data* function_data = static_cast<MonikerWriteFifoI32Data*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto timeout = function_data->timeout;
+    auto request = &function_data->request;
+
+    packedData.UnpackTo(request);
+    auto data = const_cast<int32_t*>(request->data().data());
+    size_t number_of_elements = static_cast<size_t>(request->data().size());
+    size_t empty_elements_remaining {};
+
+    auto status = library->WriteFifoI32(session, fifo, data, number_of_elements, timeout, &empty_elements_remaining);
+
+    if (status < 0)
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerWriteFifoI64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerWriteFifoI64Data* function_data = static_cast<MonikerWriteFifoI64Data*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto timeout = function_data->timeout;
+    auto request = &function_data->request;
+
+    packedData.UnpackTo(request);
+    auto data = const_cast<int64_t*>(request->data().data());
+    size_t number_of_elements = static_cast<size_t>(request->data().size());
+    size_t empty_elements_remaining {};
+
+    auto status = library->WriteFifoI64(session, fifo, data, number_of_elements, timeout, &empty_elements_remaining);
+
+    if (status < 0)
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerWriteFifoI8(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerWriteFifoI8Data* function_data = static_cast<MonikerWriteFifoI8Data*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto timeout = function_data->timeout;
+    auto request = &function_data->request;
+
+    packedData.UnpackTo(request);
+    auto data_raw = request->data();
+    auto data = std::vector<int8_t>();
+    data.reserve(data_raw.size());
+    std::transform(
+      data_raw.begin(),
+      data_raw.end(),
+      std::back_inserter(data),
+      [](auto x) {
+            if (x < std::numeric_limits<int8_t>::min() || x > std::numeric_limits<int8_t>::max()) {
+                std::string message("value ");
+                message.append(std::to_string(x));
+                message.append(" doesn't fit in datatype ");
+                message.append("int8_t");
+                throw nidevice_grpc::ValueOutOfRangeException(message);
+            }
+            return static_cast<int8_t>(x);
+      });
+
+    size_t number_of_elements = static_cast<size_t>(request->data().size());
+    size_t empty_elements_remaining {};
+
+    auto status = library->WriteFifoI8(session, fifo, data.data(), number_of_elements, timeout, &empty_elements_remaining);
+
+    if (status < 0)
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerWriteFifoSgl(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerWriteFifoSglData* function_data = static_cast<MonikerWriteFifoSglData*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto timeout = function_data->timeout;
+    auto request = &function_data->request;
+
+    packedData.UnpackTo(request);
+    auto data = const_cast<float*>(request->data().data());
+    size_t number_of_elements = static_cast<size_t>(request->data().size());
+    size_t empty_elements_remaining {};
+
+    auto status = library->WriteFifoSgl(session, fifo, data, number_of_elements, timeout, &empty_elements_remaining);
+
+    if (status < 0)
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerWriteFifoU16(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerWriteFifoU16Data* function_data = static_cast<MonikerWriteFifoU16Data*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto timeout = function_data->timeout;
+    auto request = &function_data->request;
+
+    packedData.UnpackTo(request);
+    auto data_raw = request->data();
+    auto data = std::vector<uint16_t>();
+    data.reserve(data_raw.size());
+    std::transform(
+      data_raw.begin(),
+      data_raw.end(),
+      std::back_inserter(data),
+      [](auto x) {
+            if (x < std::numeric_limits<uint16_t>::min() || x > std::numeric_limits<uint16_t>::max()) {
+                std::string message("value ");
+                message.append(std::to_string(x));
+                message.append(" doesn't fit in datatype ");
+                message.append("uint16_t");
+                throw nidevice_grpc::ValueOutOfRangeException(message);
+            }
+            return static_cast<uint16_t>(x);
+      });
+
+    size_t number_of_elements = static_cast<size_t>(request->data().size());
+    size_t empty_elements_remaining {};
+
+    auto status = library->WriteFifoU16(session, fifo, data.data(), number_of_elements, timeout, &empty_elements_remaining);
+
+    if (status < 0)
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerWriteFifoU32(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerWriteFifoU32Data* function_data = static_cast<MonikerWriteFifoU32Data*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto timeout = function_data->timeout;
+    auto request = &function_data->request;
+
+    packedData.UnpackTo(request);
+    auto data = const_cast<uint32_t*>(request->data().data());
+    size_t number_of_elements = static_cast<size_t>(request->data().size());
+    size_t empty_elements_remaining {};
+
+    auto status = library->WriteFifoU32(session, fifo, data, number_of_elements, timeout, &empty_elements_remaining);
+
+    if (status < 0)
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerWriteFifoU64(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerWriteFifoU64Data* function_data = static_cast<MonikerWriteFifoU64Data*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto timeout = function_data->timeout;
+    auto request = &function_data->request;
+
+    packedData.UnpackTo(request);
+    auto data = const_cast<uint64_t*>(request->data().data());
+    size_t number_of_elements = static_cast<size_t>(request->data().size());
+    size_t empty_elements_remaining {};
+
+    auto status = library->WriteFifoU64(session, fifo, data, number_of_elements, timeout, &empty_elements_remaining);
+
+    if (status < 0)
+    {
+      return ::grpc::Status(grpc::StatusCode::UNKNOWN, "ni-error: " + status);
+    }
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status MonikerWriteFifoU8(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  {
+    MonikerWriteFifoU8Data* function_data = static_cast<MonikerWriteFifoU8Data*>(data);
+    auto library = function_data->library;
+    auto response = &function_data->response;
+    auto session = function_data->session;
+    auto fifo = function_data->fifo;
+    auto timeout = function_data->timeout;
+    auto request = &function_data->request;
+
+    packedData.UnpackTo(request);
+    auto data_raw = request->data();
+    auto data = std::vector<uint8_t>();
+    data.reserve(data_raw.size());
+    std::transform(
+      data_raw.begin(),
+      data_raw.end(),
+      std::back_inserter(data),
+      [](auto x) {
+            if (x < std::numeric_limits<uint8_t>::min() || x > std::numeric_limits<uint8_t>::max()) {
+                std::string message("value ");
+                message.append(std::to_string(x));
+                message.append(" doesn't fit in datatype ");
+                message.append("uint8_t");
+                throw nidevice_grpc::ValueOutOfRangeException(message);
+            }
+            return static_cast<uint8_t>(x);
+      });
+
+    size_t number_of_elements = static_cast<size_t>(request->data().size());
+    size_t empty_elements_remaining {};
+
+    auto status = library->WriteFifoU8(session, fifo, data.data(), number_of_elements, timeout, &empty_elements_remaining);
 
     if (status < 0)
     {
@@ -2936,6 +3850,40 @@ namespace nifpga_grpc {
 
   //---------------------------------------------------------------------
   //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginReadFifoBool(::grpc::ServerContext* context, const BeginReadFifoBoolRequest* request, BeginReadFifoBoolResponse* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      size_t number_of_elements = request->number_of_elements();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerReadFifoBoolData>();
+      data->session = session;
+      data->fifo = fifo;
+      data->number_of_elements = number_of_elements;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      data->response.mutable_data()->Reserve(request->number_of_elements());
+      data->response.mutable_data()->Resize(request->number_of_elements(), 0);
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerReadFifoBool", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
   ::grpc::Status NiFpgaService::ReadFifoDbl(::grpc::ServerContext* context, const ReadFifoDblRequest* request, ReadFifoDblResponse* response)
   {
     if (context->IsCancelled()) {
@@ -2956,6 +3904,40 @@ namespace nifpga_grpc {
       }
       response->set_status(status);
       response->set_elements_remaining(elements_remaining);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginReadFifoDbl(::grpc::ServerContext* context, const BeginReadFifoDblRequest* request, BeginReadFifoDblResponse* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      size_t number_of_elements = request->number_of_elements();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerReadFifoDblData>();
+      data->session = session;
+      data->fifo = fifo;
+      data->number_of_elements = number_of_elements;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      data->response.mutable_data()->Reserve(request->number_of_elements());
+      data->response.mutable_data()->Resize(request->number_of_elements(), 0);
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerReadFifoDbl", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
       return ::grpc::Status::OK;
     }
     catch (nidevice_grpc::NonDriverException& ex) {
@@ -3002,6 +3984,40 @@ namespace nifpga_grpc {
 
   //---------------------------------------------------------------------
   //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginReadFifoI16(::grpc::ServerContext* context, const BeginReadFifoI16Request* request, BeginReadFifoI16Response* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      size_t number_of_elements = request->number_of_elements();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerReadFifoI16Data>();
+      data->session = session;
+      data->fifo = fifo;
+      data->number_of_elements = number_of_elements;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      data->response.mutable_data()->Reserve(request->number_of_elements());
+      data->response.mutable_data()->Resize(request->number_of_elements(), 0);
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerReadFifoI16", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
   ::grpc::Status NiFpgaService::ReadFifoI32(::grpc::ServerContext* context, const ReadFifoI32Request* request, ReadFifoI32Response* response)
   {
     if (context->IsCancelled()) {
@@ -3031,6 +4047,40 @@ namespace nifpga_grpc {
 
   //---------------------------------------------------------------------
   //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginReadFifoI32(::grpc::ServerContext* context, const BeginReadFifoI32Request* request, BeginReadFifoI32Response* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      size_t number_of_elements = request->number_of_elements();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerReadFifoI32Data>();
+      data->session = session;
+      data->fifo = fifo;
+      data->number_of_elements = number_of_elements;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      data->response.mutable_data()->Reserve(request->number_of_elements());
+      data->response.mutable_data()->Resize(request->number_of_elements(), 0);
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerReadFifoI32", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
   ::grpc::Status NiFpgaService::ReadFifoI64(::grpc::ServerContext* context, const ReadFifoI64Request* request, ReadFifoI64Response* response)
   {
     if (context->IsCancelled()) {
@@ -3051,6 +4101,40 @@ namespace nifpga_grpc {
       }
       response->set_status(status);
       response->set_elements_remaining(elements_remaining);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginReadFifoI64(::grpc::ServerContext* context, const BeginReadFifoI64Request* request, BeginReadFifoI64Response* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      size_t number_of_elements = request->number_of_elements();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerReadFifoI64Data>();
+      data->session = session;
+      data->fifo = fifo;
+      data->number_of_elements = number_of_elements;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      data->response.mutable_data()->Reserve(request->number_of_elements());
+      data->response.mutable_data()->Resize(request->number_of_elements(), 0);
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerReadFifoI64", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
       return ::grpc::Status::OK;
     }
     catch (nidevice_grpc::NonDriverException& ex) {
@@ -3097,6 +4181,40 @@ namespace nifpga_grpc {
 
   //---------------------------------------------------------------------
   //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginReadFifoI8(::grpc::ServerContext* context, const BeginReadFifoI8Request* request, BeginReadFifoI8Response* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      size_t number_of_elements = request->number_of_elements();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerReadFifoI8Data>();
+      data->session = session;
+      data->fifo = fifo;
+      data->number_of_elements = number_of_elements;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      data->response.mutable_data()->Reserve(request->number_of_elements());
+      data->response.mutable_data()->Resize(request->number_of_elements(), 0);
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerReadFifoI8", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
   ::grpc::Status NiFpgaService::ReadFifoSgl(::grpc::ServerContext* context, const ReadFifoSglRequest* request, ReadFifoSglResponse* response)
   {
     if (context->IsCancelled()) {
@@ -3117,6 +4235,40 @@ namespace nifpga_grpc {
       }
       response->set_status(status);
       response->set_elements_remaining(elements_remaining);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginReadFifoSgl(::grpc::ServerContext* context, const BeginReadFifoSglRequest* request, BeginReadFifoSglResponse* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      size_t number_of_elements = request->number_of_elements();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerReadFifoSglData>();
+      data->session = session;
+      data->fifo = fifo;
+      data->number_of_elements = number_of_elements;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      data->response.mutable_data()->Reserve(request->number_of_elements());
+      data->response.mutable_data()->Resize(request->number_of_elements(), 0);
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerReadFifoSgl", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
       return ::grpc::Status::OK;
     }
     catch (nidevice_grpc::NonDriverException& ex) {
@@ -3163,6 +4315,40 @@ namespace nifpga_grpc {
 
   //---------------------------------------------------------------------
   //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginReadFifoU16(::grpc::ServerContext* context, const BeginReadFifoU16Request* request, BeginReadFifoU16Response* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      size_t number_of_elements = request->number_of_elements();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerReadFifoU16Data>();
+      data->session = session;
+      data->fifo = fifo;
+      data->number_of_elements = number_of_elements;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      data->response.mutable_data()->Reserve(request->number_of_elements());
+      data->response.mutable_data()->Resize(request->number_of_elements(), 0);
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerReadFifoU16", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
   ::grpc::Status NiFpgaService::ReadFifoU32(::grpc::ServerContext* context, const ReadFifoU32Request* request, ReadFifoU32Response* response)
   {
     if (context->IsCancelled()) {
@@ -3183,6 +4369,40 @@ namespace nifpga_grpc {
       }
       response->set_status(status);
       response->set_elements_remaining(elements_remaining);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginReadFifoU32(::grpc::ServerContext* context, const BeginReadFifoU32Request* request, BeginReadFifoU32Response* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      size_t number_of_elements = request->number_of_elements();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerReadFifoU32Data>();
+      data->session = session;
+      data->fifo = fifo;
+      data->number_of_elements = number_of_elements;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      data->response.mutable_data()->Reserve(request->number_of_elements());
+      data->response.mutable_data()->Resize(request->number_of_elements(), 0);
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerReadFifoU32", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
       return ::grpc::Status::OK;
     }
     catch (nidevice_grpc::NonDriverException& ex) {
@@ -3221,6 +4441,40 @@ namespace nifpga_grpc {
 
   //---------------------------------------------------------------------
   //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginReadFifoU64(::grpc::ServerContext* context, const BeginReadFifoU64Request* request, BeginReadFifoU64Response* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      size_t number_of_elements = request->number_of_elements();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerReadFifoU64Data>();
+      data->session = session;
+      data->fifo = fifo;
+      data->number_of_elements = number_of_elements;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      data->response.mutable_data()->Reserve(request->number_of_elements());
+      data->response.mutable_data()->Resize(request->number_of_elements(), 0);
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerReadFifoU64", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
   ::grpc::Status NiFpgaService::ReadFifoU8(::grpc::ServerContext* context, const ReadFifoU8Request* request, ReadFifoU8Response* response)
   {
     if (context->IsCancelled()) {
@@ -3249,6 +4503,40 @@ namespace nifpga_grpc {
             return x;
         });
       response->set_elements_remaining(elements_remaining);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginReadFifoU8(::grpc::ServerContext* context, const BeginReadFifoU8Request* request, BeginReadFifoU8Response* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      size_t number_of_elements = request->number_of_elements();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerReadFifoU8Data>();
+      data->session = session;
+      data->fifo = fifo;
+      data->number_of_elements = number_of_elements;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      data->response.mutable_data()->Reserve(request->number_of_elements());
+      data->response.mutable_data()->Resize(request->number_of_elements(), 0);
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerReadFifoU8", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
       return ::grpc::Status::OK;
     }
     catch (nidevice_grpc::NonDriverException& ex) {
@@ -4860,6 +6148,36 @@ namespace nifpga_grpc {
 
   //---------------------------------------------------------------------
   //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginWriteFifoBool(::grpc::ServerContext* context, const BeginWriteFifoBoolRequest* request, BeginWriteFifoBoolResponse* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerWriteFifoBoolData>();
+      data->session = session;
+      data->fifo = fifo;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerWriteFifoBool", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
   ::grpc::Status NiFpgaService::WriteFifoDbl(::grpc::ServerContext* context, const WriteFifoDblRequest* request, WriteFifoDblResponse* response)
   {
     if (context->IsCancelled()) {
@@ -4879,6 +6197,36 @@ namespace nifpga_grpc {
       }
       response->set_status(status);
       response->set_empty_elements_remaining(empty_elements_remaining);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginWriteFifoDbl(::grpc::ServerContext* context, const BeginWriteFifoDblRequest* request, BeginWriteFifoDblResponse* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerWriteFifoDblData>();
+      data->session = session;
+      data->fifo = fifo;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerWriteFifoDbl", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
       return ::grpc::Status::OK;
     }
     catch (nidevice_grpc::NonDriverException& ex) {
@@ -4933,6 +6281,36 @@ namespace nifpga_grpc {
 
   //---------------------------------------------------------------------
   //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginWriteFifoI16(::grpc::ServerContext* context, const BeginWriteFifoI16Request* request, BeginWriteFifoI16Response* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerWriteFifoI16Data>();
+      data->session = session;
+      data->fifo = fifo;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerWriteFifoI16", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
   ::grpc::Status NiFpgaService::WriteFifoI32(::grpc::ServerContext* context, const WriteFifoI32Request* request, WriteFifoI32Response* response)
   {
     if (context->IsCancelled()) {
@@ -4961,6 +6339,36 @@ namespace nifpga_grpc {
 
   //---------------------------------------------------------------------
   //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginWriteFifoI32(::grpc::ServerContext* context, const BeginWriteFifoI32Request* request, BeginWriteFifoI32Response* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerWriteFifoI32Data>();
+      data->session = session;
+      data->fifo = fifo;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerWriteFifoI32", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
   ::grpc::Status NiFpgaService::WriteFifoI64(::grpc::ServerContext* context, const WriteFifoI64Request* request, WriteFifoI64Response* response)
   {
     if (context->IsCancelled()) {
@@ -4980,6 +6388,36 @@ namespace nifpga_grpc {
       }
       response->set_status(status);
       response->set_empty_elements_remaining(empty_elements_remaining);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginWriteFifoI64(::grpc::ServerContext* context, const BeginWriteFifoI64Request* request, BeginWriteFifoI64Response* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerWriteFifoI64Data>();
+      data->session = session;
+      data->fifo = fifo;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerWriteFifoI64", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
       return ::grpc::Status::OK;
     }
     catch (nidevice_grpc::NonDriverException& ex) {
@@ -5034,6 +6472,36 @@ namespace nifpga_grpc {
 
   //---------------------------------------------------------------------
   //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginWriteFifoI8(::grpc::ServerContext* context, const BeginWriteFifoI8Request* request, BeginWriteFifoI8Response* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerWriteFifoI8Data>();
+      data->session = session;
+      data->fifo = fifo;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerWriteFifoI8", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
   ::grpc::Status NiFpgaService::WriteFifoSgl(::grpc::ServerContext* context, const WriteFifoSglRequest* request, WriteFifoSglResponse* response)
   {
     if (context->IsCancelled()) {
@@ -5053,6 +6521,36 @@ namespace nifpga_grpc {
       }
       response->set_status(status);
       response->set_empty_elements_remaining(empty_elements_remaining);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginWriteFifoSgl(::grpc::ServerContext* context, const BeginWriteFifoSglRequest* request, BeginWriteFifoSglResponse* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerWriteFifoSglData>();
+      data->session = session;
+      data->fifo = fifo;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerWriteFifoSgl", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
       return ::grpc::Status::OK;
     }
     catch (nidevice_grpc::NonDriverException& ex) {
@@ -5107,6 +6605,36 @@ namespace nifpga_grpc {
 
   //---------------------------------------------------------------------
   //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginWriteFifoU16(::grpc::ServerContext* context, const BeginWriteFifoU16Request* request, BeginWriteFifoU16Response* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerWriteFifoU16Data>();
+      data->session = session;
+      data->fifo = fifo;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerWriteFifoU16", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
   ::grpc::Status NiFpgaService::WriteFifoU32(::grpc::ServerContext* context, const WriteFifoU32Request* request, WriteFifoU32Response* response)
   {
     if (context->IsCancelled()) {
@@ -5135,6 +6663,36 @@ namespace nifpga_grpc {
 
   //---------------------------------------------------------------------
   //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginWriteFifoU32(::grpc::ServerContext* context, const BeginWriteFifoU32Request* request, BeginWriteFifoU32Response* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerWriteFifoU32Data>();
+      data->session = session;
+      data->fifo = fifo;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerWriteFifoU32", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
   ::grpc::Status NiFpgaService::WriteFifoU64(::grpc::ServerContext* context, const WriteFifoU64Request* request, WriteFifoU64Response* response)
   {
     if (context->IsCancelled()) {
@@ -5154,6 +6712,36 @@ namespace nifpga_grpc {
       }
       response->set_status(status);
       response->set_empty_elements_remaining(empty_elements_remaining);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginWriteFifoU64(::grpc::ServerContext* context, const BeginWriteFifoU64Request* request, BeginWriteFifoU64Response* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerWriteFifoU64Data>();
+      data->session = session;
+      data->fifo = fifo;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerWriteFifoU64", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
       return ::grpc::Status::OK;
     }
     catch (nidevice_grpc::NonDriverException& ex) {
@@ -5199,6 +6787,36 @@ namespace nifpga_grpc {
       }
       response->set_status(status);
       response->set_empty_elements_remaining(empty_elements_remaining);
+      return ::grpc::Status::OK;
+    }
+    catch (nidevice_grpc::NonDriverException& ex) {
+      return ex.GetStatus();
+    }
+  }
+
+  //---------------------------------------------------------------------
+  //---------------------------------------------------------------------
+  ::grpc::Status NiFpgaService::BeginWriteFifoU8(::grpc::ServerContext* context, const BeginWriteFifoU8Request* request, BeginWriteFifoU8Response* response)
+  {
+    if (context->IsCancelled()) {
+      return ::grpc::Status::CANCELLED;
+    }
+    try {
+      auto session_grpc_session = request->session();
+      NiFpga_Session session = session_repository_->access_session(session_grpc_session.name());
+      uint32_t fifo = request->fifo();
+      uint32_t timeout = request->timeout();
+
+      auto data = std::make_unique<MonikerWriteFifoU8Data>();
+      data->session = session;
+      data->fifo = fifo;
+      data->timeout = timeout;
+      data->library = std::shared_ptr<NiFpgaLibraryInterface>(library_);
+
+      auto moniker = std::make_unique<ni::data_monikers::Moniker>();
+      ni::data_monikers::DataMonikerService::RegisterMonikerInstance("MonikerWriteFifoU8", data.release(), *moniker);
+      response->set_allocated_moniker(moniker.release());
+      response->set_status(0);
       return ::grpc::Status::OK;
     }
     catch (nidevice_grpc::NonDriverException& ex) {
