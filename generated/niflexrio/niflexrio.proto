@@ -6,7 +6,6 @@
 //---------------------------------------------------------------------
 syntax = "proto3";
 
-option cc_enable_arenas = true;
 option java_multiple_files = true;
 option java_package = "com.ni.grpc.niflexrio";
 option java_outer_classname = "NiFlexRIO";
@@ -15,7 +14,6 @@ option csharp_namespace = "NationalInstruments.Grpc.NiFlexRIO";
 package niflexrio_grpc;
 
 import "session.proto";
-import "data_moniker.proto";
 
 service NiFlexRIO {
   rpc GetAttributeInt32(GetAttributeInt32Request) returns (GetAttributeInt32Response);

@@ -10,7 +10,6 @@
 
 #include "niflexrio_service.h"
 #include "niflexrio_service_registrar.h"
-#include <server/data_moniker_service.h>
 
 namespace niflexrio_grpc {
 
@@ -29,11 +28,6 @@ std::shared_ptr<void> register_service(
       resource_repository,
       toggles);
     builder.RegisterService(service.get());
-
-    if (ni::data_monikers::is_moniker_streaming_enabled(feature_toggles)) {
-      niflexrio_grpc::RegisterMonikerEndpoints();
-    }
-
     return service;
   }
 
