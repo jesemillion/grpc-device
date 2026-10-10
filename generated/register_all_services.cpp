@@ -17,6 +17,7 @@
 #include "nidmm/nidmm_service_registrar.h"
 #include "nidmm_restricted/nidmm_restricted_service_registrar.h"
 #include "nifgen/nifgen_service_registrar.h"
+#include "niflexrio/niflexrio_service_registrar.h"
 #include "nifpga/nifpga_service_registrar.h"
 #if defined(_MSC_VER)
 #include "nimxlcterminaladaptor_restricted/nimxlcterminaladaptor_restricted_service_registrar.h"
@@ -149,6 +150,11 @@ std::shared_ptr<std::vector<std::shared_ptr<void>>> register_all_services(
     nifgen_grpc::register_service(
       server_builder, 
       vi_session_repository,
+      feature_toggles));
+  service_vector->push_back(
+    niflexrio_grpc::register_service(
+      server_builder, 
+      ni_fpga_session_repository,
       feature_toggles));
   service_vector->push_back(
     nifpga_grpc::register_service(

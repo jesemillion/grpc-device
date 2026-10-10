@@ -1,0 +1,189 @@
+
+//---------------------------------------------------------------------
+// This file is generated from NI-FlexRIO API metadata version 26.0.0f134
+//---------------------------------------------------------------------
+// Proto file for the NI-FlexRIO Metadata
+//---------------------------------------------------------------------
+syntax = "proto3";
+
+option cc_enable_arenas = true;
+option java_multiple_files = true;
+option java_package = "com.ni.grpc.niflexrio";
+option java_outer_classname = "NiFlexRIO";
+option csharp_namespace = "NationalInstruments.Grpc.NiFlexRIO";
+
+package niflexrio_grpc;
+
+import "session.proto";
+import "data_moniker.proto";
+
+service NiFlexRIO {
+  rpc GetAttributeInt32(GetAttributeInt32Request) returns (GetAttributeInt32Response);
+  rpc SetAttributeInt32(SetAttributeInt32Request) returns (SetAttributeInt32Response);
+  rpc Commit(CommitRequest) returns (CommitResponse);
+  rpc GetAttributeDouble(GetAttributeDoubleRequest) returns (GetAttributeDoubleResponse);
+  rpc SetAttributeDouble(SetAttributeDoubleRequest) returns (SetAttributeDoubleResponse);
+}
+
+enum AttributeInt32 {
+  ATTRIBUTE_INT32_UNSPECIFIED = 0;
+  ATTRIBUTE_INT32_ChannelsInStream = 268435456;
+  ATTRIBUTE_INT32_StreamDataFormat = 268435459;
+  ATTRIBUTE_INT32_AdcResolution = 268435461;
+  ATTRIBUTE_INT32_AdcSampleContainer = 268435462;
+  ATTRIBUTE_INT32_TClkSessionReference = 268435463;
+  ATTRIBUTE_INT32_AnalogEdgeTriggerChannel = 268435464;
+  ATTRIBUTE_INT32_StartTriggerType = 268435465;
+  ATTRIBUTE_INT32_ReferenceClockSource = 268435467;
+  ATTRIBUTE_INT32_CalibrationStorageSize = 268435468;
+  ATTRIBUTE_INT32_IoError = 268435469;
+  ATTRIBUTE_INT32_AiNyquistZone = 268435470;
+  ATTRIBUTE_INT32_AiChannelCount = 268435471;
+  ATTRIBUTE_INT32_AdcClockDivisor = 268435472;
+  ATTRIBUTE_INT32_AiCoupling = 268435473;
+  ATTRIBUTE_INT32_PhaseDacValue = 268435474;
+  ATTRIBUTE_INT32_SampleClockSource = 268435475;
+  ATTRIBUTE_INT32_AiDecimationFilterBand = 268435476;
+  ATTRIBUTE_INT32_DataClockDivisor = 268435477;
+  ATTRIBUTE_INT32_StartTriggerSensitivity = 268435478;
+  ATTRIBUTE_INT32_BaseboardReferenceClockSource = 268435480;
+  ATTRIBUTE_INT32_AdcInterleavingFactor = 268435481;
+  ATTRIBUTE_INT32_DacClockDivisor = 268435482;
+  ATTRIBUTE_INT32_AoChannelCount = 268435483;
+  ATTRIBUTE_INT32_AiOffsetDac = 268435484;
+  ATTRIBUTE_INT32_BusType = 268435485;
+  ATTRIBUTE_INT32_PrimaryTClkStreamInstance = 268435488;
+  ATTRIBUTE_INT32_StartTriggerSynchronizer = 268435489;
+  ATTRIBUTE_INT32_DacResolution = 268435491;
+  ATTRIBUTE_INT32_UserClockCount = 268435492;
+  ATTRIBUTE_INT32_CableSenseMode = 268435493;
+  ATTRIBUTE_INT32_SiChannelCount = 268435494;
+  ATTRIBUTE_INT32_SoChannelCount = 268435495;
+  ATTRIBUTE_INT32_SiPoCSource = 268435496;
+  ATTRIBUTE_INT32_SoPoCSink = 268435497;
+  ATTRIBUTE_INT32_DiChannelCount = 268435498;
+  ATTRIBUTE_INT32_DoChannelCount = 268435499;
+  ATTRIBUTE_INT32_PfiChannelCount = 268435500;
+  ATTRIBUTE_INT32_DiffPfiChannelCount = 268435501;
+  ATTRIBUTE_INT32_PfiLineConfig = 268435502;
+  ATTRIBUTE_INT32_DiffPfiLineConfig = 268435503;
+  ATTRIBUTE_INT32_DioChannelCount = 268435504;
+  ATTRIBUTE_INT32_DioLineConfig = 268435505;
+  ATTRIBUTE_INT32_AoChannelStatus = 268435507;
+  ATTRIBUTE_INT32_SiCsi2Lanes = 268435509;
+  ATTRIBUTE_INT32_SoCsi2Lanes = 268435510;
+  ATTRIBUTE_INT32_CircularBufferSegments = 268435736;
+}
+
+enum AttributeDouble {
+  ATTRIBUTE_DOUBLE_UNSPECIFIED = 0;
+  ATTRIBUTE_DOUBLE_AnalogEdgeTriggerLevel = 536870914;
+  ATTRIBUTE_DOUBLE_AnalogEdgeTriggerHysteresis = 536870915;
+  ATTRIBUTE_DOUBLE_ExternalAnalogEdgeTriggerLevel = 536870916;
+  ATTRIBUTE_DOUBLE_FpgaTemperature = 536870917;
+  ATTRIBUTE_DOUBLE_TotalPower = 536870918;
+  ATTRIBUTE_DOUBLE_12vPower = 536870919;
+  ATTRIBUTE_DOUBLE_3v3Power = 536870920;
+  ATTRIBUTE_DOUBLE_12vIoPower = 536870921;
+  ATTRIBUTE_DOUBLE_TemperatureLimit = 536870922;
+  ATTRIBUTE_DOUBLE_PowerLimit = 536870923;
+  ATTRIBUTE_DOUBLE_AdcTemperature = 536870924;
+  ATTRIBUTE_DOUBLE_CalibrationTemperature = 536870925;
+  ATTRIBUTE_DOUBLE_VerificationTemperature = 536870926;
+  ATTRIBUTE_DOUBLE_AiImpedance = 536870927;
+  ATTRIBUTE_DOUBLE_AiRange = 536870928;
+  ATTRIBUTE_DOUBLE_AiScalingGain = 536870929;
+  ATTRIBUTE_DOUBLE_AiScalingOffset = 536870930;
+  ATTRIBUTE_DOUBLE_SampleDt = 536870931;
+  ATTRIBUTE_DOUBLE_DioVoltage = 536870932;
+  ATTRIBUTE_DOUBLE_DataClockRate = 536870933;
+  ATTRIBUTE_DOUBLE_AdcSampleRate = 536870934;
+  ATTRIBUTE_DOUBLE_SampleClockTimebaseRate = 536870935;
+  ATTRIBUTE_DOUBLE_ReferenceClockRate = 536870936;
+  ATTRIBUTE_DOUBLE_DataDelay = 536870937;
+  ATTRIBUTE_DOUBLE_DacSampleRate = 536870938;
+  ATTRIBUTE_DOUBLE_AoImpedance = 536870939;
+  ATTRIBUTE_DOUBLE_AoScalingGain = 536870940;
+  ATTRIBUTE_DOUBLE_AoScalingOffset = 536870941;
+  ATTRIBUTE_DOUBLE_AoRange = 536870942;
+  ATTRIBUTE_DOUBLE_AiOffset = 536870943;
+  ATTRIBUTE_DOUBLE_ExternalAnalogEdgeTriggerHysteresis = 536870945;
+  ATTRIBUTE_DOUBLE_DspFrequencyShiftMagnitude = 536870954;
+  ATTRIBUTE_DOUBLE_DspFrequencyShift = 536870955;
+  ATTRIBUTE_DOUBLE_UserClockFrequency = 536870956;
+  ATTRIBUTE_DOUBLE_SiPoCVoltage = 536870957;
+  ATTRIBUTE_DOUBLE_SoPoCVoltage = 536870958;
+  ATTRIBUTE_DOUBLE_SiPoCCurrent = 536870959;
+  ATTRIBUTE_DOUBLE_SoPoCCurrent = 536870960;
+  ATTRIBUTE_DOUBLE_PfiVoltage = 536870961;
+  ATTRIBUTE_DOUBLE_DioLineVoltage = 536870962;
+  ATTRIBUTE_DOUBLE_TotalIoPower = 536870963;
+  ATTRIBUTE_DOUBLE_SoCsi2DataRate = 536870964;
+  ATTRIBUTE_DOUBLE_SiRefClkFrequency = 536870965;
+  ATTRIBUTE_DOUBLE_SoRefClkFrequency = 536870966;
+}
+
+message GetAttributeInt32Request {
+  nidevice_grpc.Session session = 1;
+  string repeated_capability = 2;
+  oneof attr_id_enum {
+    AttributeInt32 attr_id = 3;
+    int32 attr_id_raw = 4;
+  }
+}
+
+message GetAttributeInt32Response {
+  int32 status = 1;
+  int32 value = 2;
+}
+
+message SetAttributeInt32Request {
+  nidevice_grpc.Session session = 1;
+  string repeated_capability = 2;
+  oneof attr_id_enum {
+    AttributeInt32 attr_id = 3;
+    int32 attr_id_raw = 4;
+  }
+  int32 value = 5;
+}
+
+message SetAttributeInt32Response {
+  int32 status = 1;
+}
+
+message CommitRequest {
+  nidevice_grpc.Session session = 1;
+}
+
+message CommitResponse {
+  int32 status = 1;
+}
+
+message GetAttributeDoubleRequest {
+  nidevice_grpc.Session session = 1;
+  string repeated_capability = 2;
+  oneof attr_id_enum {
+    AttributeDouble attr_id = 3;
+    int32 attr_id_raw = 4;
+  }
+}
+
+message GetAttributeDoubleResponse {
+  int32 status = 1;
+  double value = 2;
+}
+
+message SetAttributeDoubleRequest {
+  nidevice_grpc.Session session = 1;
+  string repeated_capability = 2;
+  oneof attr_id_enum {
+    AttributeDouble attr_id = 3;
+    int32 attr_id_raw = 4;
+  }
+  double value = 5;
+}
+
+message SetAttributeDoubleResponse {
+  int32 status = 1;
+}
+
