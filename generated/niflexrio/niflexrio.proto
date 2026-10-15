@@ -121,6 +121,11 @@ enum AttributeDouble {
   ATTRIBUTE_DOUBLE_SoRefClkFrequency = 536870966;
 }
 
+enum DioConfiguration {
+  DIO_CONFIGURATION_DioConfiguration_Input = 0;
+  DIO_CONFIGURATION_DioConfiguration_Output = 1;
+}
+
 message GetAttributeInt32Request {
   nidevice_grpc.Session session = 1;
   string repeated_capability = 2;

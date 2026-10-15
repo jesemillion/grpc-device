@@ -366,6 +366,18 @@ enums = {
                 'value': 0x20000036
             }
         ]
+    },
+    'DioConfiguration': {
+        'force-include': True,
+        'values': [
+            {
+                'name': 'DioConfiguration_Input',
+                'value': 0
+            },
+            {
+                'name': 'DioConfiguration_Output',
+                'value': 1
+            }
+        ]
     }
-
 }
