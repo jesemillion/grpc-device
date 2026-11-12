@@ -336,6 +336,55 @@ TEST_F(NiFakeFpgaStreamingTests, StreamReadWrite_Array)
   write_stream->Finish();
 }
 
+TEST_F(NiFakeFpgaStreamingTests, StreamReadWrite_DmaFifo)
+{
+  auto session = std::make_unique<nidevice_grpc::Session>();
+  const uint32_t fifo = 1;
+  const uint32_t timeout = 1000;
+  std::vector<int16_t> read_data = {1, 2, 3, 4};
+  std::vector<pb::int32> write_data = {5, 6, 7, 8};
+
+  EXPECT_CALL(*library(), ReadFifoI16(_, fifo, _, read_data.size(), timeout, _))
+      .WillRepeatedly(::testing::DoAll(
+          ::testing::SetArrayArgument<2>(read_data.begin(), read_data.end()),
+          ::testing::SetArgPointee<5>(2),
+          ::testing::Return(0)));
+  EXPECT_CALL(*library(), WriteFifoI16(_, fifo, _, write_data.size(), timeout, _))
+      .With(Args<2, 3>(ElementsAreArray(write_data)))
+      .WillRepeatedly(::testing::DoAll(::testing::SetArgPointee<5>(3), ::testing::Return(0)));
+
+  auto begin_read_response = nifpga_grpc::experimental::client::begin_read_fifo_i16(stub(), *session, fifo, read_data.size(), timeout);
+  auto read_moniker = new ni::data_monikers::Moniker(begin_read_response.moniker());
+  auto begin_write_response = nifpga_grpc::experimental::client::begin_write_fifo_i16(stub(), *session, fifo, timeout);
+  auto write_moniker = new ni::data_monikers::Moniker(begin_write_response.moniker());
+
+  grpc::ClientContext moniker_context;
+  ni::data_monikers::MonikerWriteRequest moniker_request;
+  moniker_request.mutable_monikers()->mutable_read_monikers()->AddAllocated(read_moniker);
+  moniker_request.mutable_monikers()->mutable_write_monikers()->AddAllocated(write_moniker);
+
+  auto stream = moniker_stub().get()->StreamReadWrite(&moniker_context);
+  ASSERT_TRUE(stream->Write(moniker_request));
+
+  nifpga_grpc::MonikerWriteFifoI16Request write_request;
+  write_request.mutable_data()->Add(write_data.begin(), write_data.end());
+  ni::data_monikers::MonikerWriteRequest write_data_request;
+  write_data_request.mutable_data()->add_values()->PackFrom(write_request);
+  ASSERT_TRUE(stream->Write(write_data_request));
+
+  ni::data_monikers::MonikerReadResponse read_result;
+  ASSERT_TRUE(stream->Read(&read_result));
+  ASSERT_EQ(read_result.data().values_size(), 1);
+
+  nifpga_grpc::MonikerReadFifoI16Response read_response;
+  ASSERT_TRUE(read_result.data().values(0).UnpackTo(&read_response));
+  EXPECT_THAT(read_response.data(), ElementsAreArray(read_data));
+  EXPECT_EQ(read_response.elements_remaining(), 2);
+
+  stream->WritesDone();
+  moniker_context.TryCancel();
+}
+
 // disable this test since we are not supporting sideband streaming inprocess
 
 TEST_F(NiFakeFpgaStreamingTests, DISABLED_SidebandStreamReadWrite_Array)
