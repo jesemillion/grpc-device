@@ -61,16 +61,27 @@ service NiFpga {
   rpc ReadDbl(ReadDblRequest) returns (ReadDblResponse);
   rpc BeginReadDbl(BeginReadDblRequest) returns (BeginReadDblResponse);
   rpc ReadFifoBool(ReadFifoBoolRequest) returns (ReadFifoBoolResponse);
+  rpc BeginReadFifoBool(BeginReadFifoBoolRequest) returns (BeginReadFifoBoolResponse);
   rpc ReadFifoDbl(ReadFifoDblRequest) returns (ReadFifoDblResponse);
+  rpc BeginReadFifoDbl(BeginReadFifoDblRequest) returns (BeginReadFifoDblResponse);
   rpc ReadFifoI16(ReadFifoI16Request) returns (ReadFifoI16Response);
+  rpc BeginReadFifoI16(BeginReadFifoI16Request) returns (BeginReadFifoI16Response);
   rpc ReadFifoI32(ReadFifoI32Request) returns (ReadFifoI32Response);
+  rpc BeginReadFifoI32(BeginReadFifoI32Request) returns (BeginReadFifoI32Response);
   rpc ReadFifoI64(ReadFifoI64Request) returns (ReadFifoI64Response);
+  rpc BeginReadFifoI64(BeginReadFifoI64Request) returns (BeginReadFifoI64Response);
   rpc ReadFifoI8(ReadFifoI8Request) returns (ReadFifoI8Response);
+  rpc BeginReadFifoI8(BeginReadFifoI8Request) returns (BeginReadFifoI8Response);
   rpc ReadFifoSgl(ReadFifoSglRequest) returns (ReadFifoSglResponse);
+  rpc BeginReadFifoSgl(BeginReadFifoSglRequest) returns (BeginReadFifoSglResponse);
   rpc ReadFifoU16(ReadFifoU16Request) returns (ReadFifoU16Response);
+  rpc BeginReadFifoU16(BeginReadFifoU16Request) returns (BeginReadFifoU16Response);
   rpc ReadFifoU32(ReadFifoU32Request) returns (ReadFifoU32Response);
+  rpc BeginReadFifoU32(BeginReadFifoU32Request) returns (BeginReadFifoU32Response);
   rpc ReadFifoU64(ReadFifoU64Request) returns (ReadFifoU64Response);
+  rpc BeginReadFifoU64(BeginReadFifoU64Request) returns (BeginReadFifoU64Response);
   rpc ReadFifoU8(ReadFifoU8Request) returns (ReadFifoU8Response);
+  rpc BeginReadFifoU8(BeginReadFifoU8Request) returns (BeginReadFifoU8Response);
   rpc ReadI16(ReadI16Request) returns (ReadI16Response);
   rpc BeginReadI16(BeginReadI16Request) returns (BeginReadI16Response);
   rpc ReadI32(ReadI32Request) returns (ReadI32Response);
@@ -127,16 +138,27 @@ service NiFpga {
   rpc WriteDbl(WriteDblRequest) returns (WriteDblResponse);
   rpc BeginWriteDbl(BeginWriteDblRequest) returns (BeginWriteDblResponse);
   rpc WriteFifoBool(WriteFifoBoolRequest) returns (WriteFifoBoolResponse);
+  rpc BeginWriteFifoBool(BeginWriteFifoBoolRequest) returns (BeginWriteFifoBoolResponse);
   rpc WriteFifoDbl(WriteFifoDblRequest) returns (WriteFifoDblResponse);
+  rpc BeginWriteFifoDbl(BeginWriteFifoDblRequest) returns (BeginWriteFifoDblResponse);
   rpc WriteFifoI16(WriteFifoI16Request) returns (WriteFifoI16Response);
+  rpc BeginWriteFifoI16(BeginWriteFifoI16Request) returns (BeginWriteFifoI16Response);
   rpc WriteFifoI32(WriteFifoI32Request) returns (WriteFifoI32Response);
+  rpc BeginWriteFifoI32(BeginWriteFifoI32Request) returns (BeginWriteFifoI32Response);
   rpc WriteFifoI64(WriteFifoI64Request) returns (WriteFifoI64Response);
+  rpc BeginWriteFifoI64(BeginWriteFifoI64Request) returns (BeginWriteFifoI64Response);
   rpc WriteFifoI8(WriteFifoI8Request) returns (WriteFifoI8Response);
+  rpc BeginWriteFifoI8(BeginWriteFifoI8Request) returns (BeginWriteFifoI8Response);
   rpc WriteFifoSgl(WriteFifoSglRequest) returns (WriteFifoSglResponse);
+  rpc BeginWriteFifoSgl(BeginWriteFifoSglRequest) returns (BeginWriteFifoSglResponse);
   rpc WriteFifoU16(WriteFifoU16Request) returns (WriteFifoU16Response);
+  rpc BeginWriteFifoU16(BeginWriteFifoU16Request) returns (BeginWriteFifoU16Response);
   rpc WriteFifoU32(WriteFifoU32Request) returns (WriteFifoU32Response);
+  rpc BeginWriteFifoU32(BeginWriteFifoU32Request) returns (BeginWriteFifoU32Response);
   rpc WriteFifoU64(WriteFifoU64Request) returns (WriteFifoU64Response);
+  rpc BeginWriteFifoU64(BeginWriteFifoU64Request) returns (BeginWriteFifoU64Response);
   rpc WriteFifoU8(WriteFifoU8Request) returns (WriteFifoU8Response);
+  rpc BeginWriteFifoU8(BeginWriteFifoU8Request) returns (BeginWriteFifoU8Response);
   rpc WriteI16(WriteI16Request) returns (WriteI16Response);
   rpc BeginWriteI16(BeginWriteI16Request) returns (BeginWriteI16Response);
   rpc WriteI32(WriteI32Request) returns (WriteI32Response);
@@ -785,6 +807,25 @@ message ReadFifoBoolResponse {
   uint32 elements_remaining = 3;
 }
 
+message BeginReadFifoBoolRequest {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 number_of_elements = 3;
+  uint32 timeout = 4;
+}
+
+message BeginReadFifoBoolResponse {
+  int32 status = 1;
+  uint32 elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerReadFifoBoolResponse {
+  int32 status = 1;
+  repeated bool data = 2;
+  uint32 elements_remaining = 3;
+}
+
 message ReadFifoDblRequest {
   nidevice_grpc.Session session = 1;
   uint32 fifo = 2;
@@ -793,6 +834,25 @@ message ReadFifoDblRequest {
 }
 
 message ReadFifoDblResponse {
+  int32 status = 1;
+  repeated double data = 2;
+  uint32 elements_remaining = 3;
+}
+
+message BeginReadFifoDblRequest {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 number_of_elements = 3;
+  uint32 timeout = 4;
+}
+
+message BeginReadFifoDblResponse {
+  int32 status = 1;
+  uint32 elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerReadFifoDblResponse {
   int32 status = 1;
   repeated double data = 2;
   uint32 elements_remaining = 3;
@@ -811,6 +871,25 @@ message ReadFifoI16Response {
   uint32 elements_remaining = 3;
 }
 
+message BeginReadFifoI16Request {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 number_of_elements = 3;
+  uint32 timeout = 4;
+}
+
+message BeginReadFifoI16Response {
+  int32 status = 1;
+  uint32 elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerReadFifoI16Response {
+  int32 status = 1;
+  repeated int32 data = 2;
+  uint32 elements_remaining = 3;
+}
+
 message ReadFifoI32Request {
   nidevice_grpc.Session session = 1;
   uint32 fifo = 2;
@@ -819,6 +898,25 @@ message ReadFifoI32Request {
 }
 
 message ReadFifoI32Response {
+  int32 status = 1;
+  repeated int32 data = 2;
+  uint32 elements_remaining = 3;
+}
+
+message BeginReadFifoI32Request {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 number_of_elements = 3;
+  uint32 timeout = 4;
+}
+
+message BeginReadFifoI32Response {
+  int32 status = 1;
+  uint32 elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerReadFifoI32Response {
   int32 status = 1;
   repeated int32 data = 2;
   uint32 elements_remaining = 3;
@@ -837,6 +935,25 @@ message ReadFifoI64Response {
   uint32 elements_remaining = 3;
 }
 
+message BeginReadFifoI64Request {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 number_of_elements = 3;
+  uint32 timeout = 4;
+}
+
+message BeginReadFifoI64Response {
+  int32 status = 1;
+  uint32 elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerReadFifoI64Response {
+  int32 status = 1;
+  repeated int64 data = 2;
+  uint32 elements_remaining = 3;
+}
+
 message ReadFifoI8Request {
   nidevice_grpc.Session session = 1;
   uint32 fifo = 2;
@@ -845,6 +962,25 @@ message ReadFifoI8Request {
 }
 
 message ReadFifoI8Response {
+  int32 status = 1;
+  repeated int32 data = 2;
+  uint32 elements_remaining = 3;
+}
+
+message BeginReadFifoI8Request {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 number_of_elements = 3;
+  uint32 timeout = 4;
+}
+
+message BeginReadFifoI8Response {
+  int32 status = 1;
+  uint32 elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerReadFifoI8Response {
   int32 status = 1;
   repeated int32 data = 2;
   uint32 elements_remaining = 3;
@@ -863,6 +999,25 @@ message ReadFifoSglResponse {
   uint32 elements_remaining = 3;
 }
 
+message BeginReadFifoSglRequest {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 number_of_elements = 3;
+  uint32 timeout = 4;
+}
+
+message BeginReadFifoSglResponse {
+  int32 status = 1;
+  uint32 elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerReadFifoSglResponse {
+  int32 status = 1;
+  repeated float data = 2;
+  uint32 elements_remaining = 3;
+}
+
 message ReadFifoU16Request {
   nidevice_grpc.Session session = 1;
   uint32 fifo = 2;
@@ -871,6 +1026,25 @@ message ReadFifoU16Request {
 }
 
 message ReadFifoU16Response {
+  int32 status = 1;
+  repeated uint32 data = 2;
+  uint32 elements_remaining = 3;
+}
+
+message BeginReadFifoU16Request {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 number_of_elements = 3;
+  uint32 timeout = 4;
+}
+
+message BeginReadFifoU16Response {
+  int32 status = 1;
+  uint32 elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerReadFifoU16Response {
   int32 status = 1;
   repeated uint32 data = 2;
   uint32 elements_remaining = 3;
@@ -889,6 +1063,25 @@ message ReadFifoU32Response {
   uint32 elements_remaining = 3;
 }
 
+message BeginReadFifoU32Request {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 number_of_elements = 3;
+  uint32 timeout = 4;
+}
+
+message BeginReadFifoU32Response {
+  int32 status = 1;
+  uint32 elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerReadFifoU32Response {
+  int32 status = 1;
+  repeated uint32 data = 2;
+  uint32 elements_remaining = 3;
+}
+
 message ReadFifoU64Request {
   nidevice_grpc.Session session = 1;
   uint32 fifo = 2;
@@ -902,6 +1095,25 @@ message ReadFifoU64Response {
   uint32 elements_remaining = 3;
 }
 
+message BeginReadFifoU64Request {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 number_of_elements = 3;
+  uint32 timeout = 4;
+}
+
+message BeginReadFifoU64Response {
+  int32 status = 1;
+  uint32 elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerReadFifoU64Response {
+  int32 status = 1;
+  repeated uint64 data = 2;
+  uint32 elements_remaining = 3;
+}
+
 message ReadFifoU8Request {
   nidevice_grpc.Session session = 1;
   uint32 fifo = 2;
@@ -910,6 +1122,25 @@ message ReadFifoU8Request {
 }
 
 message ReadFifoU8Response {
+  int32 status = 1;
+  repeated uint32 data = 2;
+  uint32 elements_remaining = 3;
+}
+
+message BeginReadFifoU8Request {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 number_of_elements = 3;
+  uint32 timeout = 4;
+}
+
+message BeginReadFifoU8Response {
+  int32 status = 1;
+  uint32 elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerReadFifoU8Response {
   int32 status = 1;
   repeated uint32 data = 2;
   uint32 elements_remaining = 3;
@@ -1641,6 +1872,27 @@ message WriteFifoBoolResponse {
   uint32 empty_elements_remaining = 2;
 }
 
+message BeginWriteFifoBoolRequest {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 timeout = 3;
+}
+
+message BeginWriteFifoBoolResponse {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerWriteFifoBoolRequest {
+  repeated bool data = 1;
+}
+
+message MonikerWriteFifoBoolResponse {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+}
+
 message WriteFifoDblRequest {
   nidevice_grpc.Session session = 1;
   uint32 fifo = 2;
@@ -1649,6 +1901,27 @@ message WriteFifoDblRequest {
 }
 
 message WriteFifoDblResponse {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+}
+
+message BeginWriteFifoDblRequest {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 timeout = 3;
+}
+
+message BeginWriteFifoDblResponse {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerWriteFifoDblRequest {
+  repeated double data = 1;
+}
+
+message MonikerWriteFifoDblResponse {
   int32 status = 1;
   uint32 empty_elements_remaining = 2;
 }
@@ -1665,6 +1938,27 @@ message WriteFifoI16Response {
   uint32 empty_elements_remaining = 2;
 }
 
+message BeginWriteFifoI16Request {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 timeout = 3;
+}
+
+message BeginWriteFifoI16Response {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerWriteFifoI16Request {
+  repeated int32 data = 1;
+}
+
+message MonikerWriteFifoI16Response {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+}
+
 message WriteFifoI32Request {
   nidevice_grpc.Session session = 1;
   uint32 fifo = 2;
@@ -1673,6 +1967,27 @@ message WriteFifoI32Request {
 }
 
 message WriteFifoI32Response {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+}
+
+message BeginWriteFifoI32Request {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 timeout = 3;
+}
+
+message BeginWriteFifoI32Response {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerWriteFifoI32Request {
+  repeated int32 data = 1;
+}
+
+message MonikerWriteFifoI32Response {
   int32 status = 1;
   uint32 empty_elements_remaining = 2;
 }
@@ -1689,6 +2004,27 @@ message WriteFifoI64Response {
   uint32 empty_elements_remaining = 2;
 }
 
+message BeginWriteFifoI64Request {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 timeout = 3;
+}
+
+message BeginWriteFifoI64Response {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerWriteFifoI64Request {
+  repeated int64 data = 1;
+}
+
+message MonikerWriteFifoI64Response {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+}
+
 message WriteFifoI8Request {
   nidevice_grpc.Session session = 1;
   uint32 fifo = 2;
@@ -1697,6 +2033,27 @@ message WriteFifoI8Request {
 }
 
 message WriteFifoI8Response {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+}
+
+message BeginWriteFifoI8Request {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 timeout = 3;
+}
+
+message BeginWriteFifoI8Response {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerWriteFifoI8Request {
+  repeated int32 data = 1;
+}
+
+message MonikerWriteFifoI8Response {
   int32 status = 1;
   uint32 empty_elements_remaining = 2;
 }
@@ -1713,6 +2070,27 @@ message WriteFifoSglResponse {
   uint32 empty_elements_remaining = 2;
 }
 
+message BeginWriteFifoSglRequest {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 timeout = 3;
+}
+
+message BeginWriteFifoSglResponse {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerWriteFifoSglRequest {
+  repeated float data = 1;
+}
+
+message MonikerWriteFifoSglResponse {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+}
+
 message WriteFifoU16Request {
   nidevice_grpc.Session session = 1;
   uint32 fifo = 2;
@@ -1721,6 +2099,27 @@ message WriteFifoU16Request {
 }
 
 message WriteFifoU16Response {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+}
+
+message BeginWriteFifoU16Request {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 timeout = 3;
+}
+
+message BeginWriteFifoU16Response {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerWriteFifoU16Request {
+  repeated uint32 data = 1;
+}
+
+message MonikerWriteFifoU16Response {
   int32 status = 1;
   uint32 empty_elements_remaining = 2;
 }
@@ -1737,6 +2136,27 @@ message WriteFifoU32Response {
   uint32 empty_elements_remaining = 2;
 }
 
+message BeginWriteFifoU32Request {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 timeout = 3;
+}
+
+message BeginWriteFifoU32Response {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerWriteFifoU32Request {
+  repeated uint32 data = 1;
+}
+
+message MonikerWriteFifoU32Response {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+}
+
 message WriteFifoU64Request {
   nidevice_grpc.Session session = 1;
   uint32 fifo = 2;
@@ -1749,6 +2169,27 @@ message WriteFifoU64Response {
   uint32 empty_elements_remaining = 2;
 }
 
+message BeginWriteFifoU64Request {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 timeout = 3;
+}
+
+message BeginWriteFifoU64Response {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerWriteFifoU64Request {
+  repeated uint64 data = 1;
+}
+
+message MonikerWriteFifoU64Response {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+}
+
 message WriteFifoU8Request {
   nidevice_grpc.Session session = 1;
   uint32 fifo = 2;
@@ -1757,6 +2198,27 @@ message WriteFifoU8Request {
 }
 
 message WriteFifoU8Response {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+}
+
+message BeginWriteFifoU8Request {
+  nidevice_grpc.Session session = 1;
+  uint32 fifo = 2;
+  uint32 timeout = 3;
+}
+
+message BeginWriteFifoU8Response {
+  int32 status = 1;
+  uint32 empty_elements_remaining = 2;
+  ni.data_monikers.Moniker moniker = 3;
+}
+
+message MonikerWriteFifoU8Request {
+  repeated uint32 data = 1;
+}
+
+message MonikerWriteFifoU8Response {
   int32 status = 1;
   uint32 empty_elements_remaining = 2;
 }

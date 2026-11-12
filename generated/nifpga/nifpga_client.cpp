@@ -862,6 +862,26 @@ read_fifo_bool(const StubPtr& stub, const nidevice_grpc::Session& session, const
   return response;
 }
 
+BeginReadFifoBoolResponse
+begin_read_fifo_bool(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& number_of_elements, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginReadFifoBoolRequest{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_number_of_elements(number_of_elements);
+  request.set_timeout(timeout);
+
+  auto response = BeginReadFifoBoolResponse{};
+
+  raise_if_error(
+      stub->BeginReadFifoBool(&context, request, &response),
+      context);
+
+  return response;
+}
+
 ReadFifoDblResponse
 read_fifo_dbl(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& number_of_elements, const pb::uint32& timeout)
 {
@@ -877,6 +897,26 @@ read_fifo_dbl(const StubPtr& stub, const nidevice_grpc::Session& session, const 
 
   raise_if_error(
       stub->ReadFifoDbl(&context, request, &response),
+      context);
+
+  return response;
+}
+
+BeginReadFifoDblResponse
+begin_read_fifo_dbl(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& number_of_elements, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginReadFifoDblRequest{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_number_of_elements(number_of_elements);
+  request.set_timeout(timeout);
+
+  auto response = BeginReadFifoDblResponse{};
+
+  raise_if_error(
+      stub->BeginReadFifoDbl(&context, request, &response),
       context);
 
   return response;
@@ -902,6 +942,26 @@ read_fifo_i16(const StubPtr& stub, const nidevice_grpc::Session& session, const 
   return response;
 }
 
+BeginReadFifoI16Response
+begin_read_fifo_i16(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& number_of_elements, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginReadFifoI16Request{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_number_of_elements(number_of_elements);
+  request.set_timeout(timeout);
+
+  auto response = BeginReadFifoI16Response{};
+
+  raise_if_error(
+      stub->BeginReadFifoI16(&context, request, &response),
+      context);
+
+  return response;
+}
+
 ReadFifoI32Response
 read_fifo_i32(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& number_of_elements, const pb::uint32& timeout)
 {
@@ -917,6 +977,26 @@ read_fifo_i32(const StubPtr& stub, const nidevice_grpc::Session& session, const 
 
   raise_if_error(
       stub->ReadFifoI32(&context, request, &response),
+      context);
+
+  return response;
+}
+
+BeginReadFifoI32Response
+begin_read_fifo_i32(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& number_of_elements, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginReadFifoI32Request{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_number_of_elements(number_of_elements);
+  request.set_timeout(timeout);
+
+  auto response = BeginReadFifoI32Response{};
+
+  raise_if_error(
+      stub->BeginReadFifoI32(&context, request, &response),
       context);
 
   return response;
@@ -942,6 +1022,26 @@ read_fifo_i64(const StubPtr& stub, const nidevice_grpc::Session& session, const 
   return response;
 }
 
+BeginReadFifoI64Response
+begin_read_fifo_i64(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& number_of_elements, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginReadFifoI64Request{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_number_of_elements(number_of_elements);
+  request.set_timeout(timeout);
+
+  auto response = BeginReadFifoI64Response{};
+
+  raise_if_error(
+      stub->BeginReadFifoI64(&context, request, &response),
+      context);
+
+  return response;
+}
+
 ReadFifoI8Response
 read_fifo_i8(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& number_of_elements, const pb::uint32& timeout)
 {
@@ -957,6 +1057,26 @@ read_fifo_i8(const StubPtr& stub, const nidevice_grpc::Session& session, const p
 
   raise_if_error(
       stub->ReadFifoI8(&context, request, &response),
+      context);
+
+  return response;
+}
+
+BeginReadFifoI8Response
+begin_read_fifo_i8(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& number_of_elements, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginReadFifoI8Request{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_number_of_elements(number_of_elements);
+  request.set_timeout(timeout);
+
+  auto response = BeginReadFifoI8Response{};
+
+  raise_if_error(
+      stub->BeginReadFifoI8(&context, request, &response),
       context);
 
   return response;
@@ -982,6 +1102,26 @@ read_fifo_sgl(const StubPtr& stub, const nidevice_grpc::Session& session, const 
   return response;
 }
 
+BeginReadFifoSglResponse
+begin_read_fifo_sgl(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& number_of_elements, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginReadFifoSglRequest{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_number_of_elements(number_of_elements);
+  request.set_timeout(timeout);
+
+  auto response = BeginReadFifoSglResponse{};
+
+  raise_if_error(
+      stub->BeginReadFifoSgl(&context, request, &response),
+      context);
+
+  return response;
+}
+
 ReadFifoU16Response
 read_fifo_u16(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& number_of_elements, const pb::uint32& timeout)
 {
@@ -997,6 +1137,26 @@ read_fifo_u16(const StubPtr& stub, const nidevice_grpc::Session& session, const 
 
   raise_if_error(
       stub->ReadFifoU16(&context, request, &response),
+      context);
+
+  return response;
+}
+
+BeginReadFifoU16Response
+begin_read_fifo_u16(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& number_of_elements, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginReadFifoU16Request{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_number_of_elements(number_of_elements);
+  request.set_timeout(timeout);
+
+  auto response = BeginReadFifoU16Response{};
+
+  raise_if_error(
+      stub->BeginReadFifoU16(&context, request, &response),
       context);
 
   return response;
@@ -1022,6 +1182,26 @@ read_fifo_u32(const StubPtr& stub, const nidevice_grpc::Session& session, const 
   return response;
 }
 
+BeginReadFifoU32Response
+begin_read_fifo_u32(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& number_of_elements, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginReadFifoU32Request{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_number_of_elements(number_of_elements);
+  request.set_timeout(timeout);
+
+  auto response = BeginReadFifoU32Response{};
+
+  raise_if_error(
+      stub->BeginReadFifoU32(&context, request, &response),
+      context);
+
+  return response;
+}
+
 ReadFifoU64Response
 read_fifo_u64(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& number_of_elements, const pb::uint32& timeout)
 {
@@ -1042,6 +1222,26 @@ read_fifo_u64(const StubPtr& stub, const nidevice_grpc::Session& session, const 
   return response;
 }
 
+BeginReadFifoU64Response
+begin_read_fifo_u64(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& number_of_elements, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginReadFifoU64Request{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_number_of_elements(number_of_elements);
+  request.set_timeout(timeout);
+
+  auto response = BeginReadFifoU64Response{};
+
+  raise_if_error(
+      stub->BeginReadFifoU64(&context, request, &response),
+      context);
+
+  return response;
+}
+
 ReadFifoU8Response
 read_fifo_u8(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& number_of_elements, const pb::uint32& timeout)
 {
@@ -1057,6 +1257,26 @@ read_fifo_u8(const StubPtr& stub, const nidevice_grpc::Session& session, const p
 
   raise_if_error(
       stub->ReadFifoU8(&context, request, &response),
+      context);
+
+  return response;
+}
+
+BeginReadFifoU8Response
+begin_read_fifo_u8(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& number_of_elements, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginReadFifoU8Request{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_number_of_elements(number_of_elements);
+  request.set_timeout(timeout);
+
+  auto response = BeginReadFifoU8Response{};
+
+  raise_if_error(
+      stub->BeginReadFifoU8(&context, request, &response),
       context);
 
   return response;
@@ -2129,6 +2349,25 @@ write_fifo_bool(const StubPtr& stub, const nidevice_grpc::Session& session, cons
   return response;
 }
 
+BeginWriteFifoBoolResponse
+begin_write_fifo_bool(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginWriteFifoBoolRequest{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_timeout(timeout);
+
+  auto response = BeginWriteFifoBoolResponse{};
+
+  raise_if_error(
+      stub->BeginWriteFifoBool(&context, request, &response),
+      context);
+
+  return response;
+}
+
 WriteFifoDblResponse
 write_fifo_dbl(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const std::vector<double>& data, const pb::uint32& timeout)
 {
@@ -2144,6 +2383,25 @@ write_fifo_dbl(const StubPtr& stub, const nidevice_grpc::Session& session, const
 
   raise_if_error(
       stub->WriteFifoDbl(&context, request, &response),
+      context);
+
+  return response;
+}
+
+BeginWriteFifoDblResponse
+begin_write_fifo_dbl(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginWriteFifoDblRequest{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_timeout(timeout);
+
+  auto response = BeginWriteFifoDblResponse{};
+
+  raise_if_error(
+      stub->BeginWriteFifoDbl(&context, request, &response),
       context);
 
   return response;
@@ -2169,6 +2427,25 @@ write_fifo_i16(const StubPtr& stub, const nidevice_grpc::Session& session, const
   return response;
 }
 
+BeginWriteFifoI16Response
+begin_write_fifo_i16(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginWriteFifoI16Request{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_timeout(timeout);
+
+  auto response = BeginWriteFifoI16Response{};
+
+  raise_if_error(
+      stub->BeginWriteFifoI16(&context, request, &response),
+      context);
+
+  return response;
+}
+
 WriteFifoI32Response
 write_fifo_i32(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const std::vector<pb::int32>& data, const pb::uint32& timeout)
 {
@@ -2184,6 +2461,25 @@ write_fifo_i32(const StubPtr& stub, const nidevice_grpc::Session& session, const
 
   raise_if_error(
       stub->WriteFifoI32(&context, request, &response),
+      context);
+
+  return response;
+}
+
+BeginWriteFifoI32Response
+begin_write_fifo_i32(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginWriteFifoI32Request{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_timeout(timeout);
+
+  auto response = BeginWriteFifoI32Response{};
+
+  raise_if_error(
+      stub->BeginWriteFifoI32(&context, request, &response),
       context);
 
   return response;
@@ -2209,6 +2505,25 @@ write_fifo_i64(const StubPtr& stub, const nidevice_grpc::Session& session, const
   return response;
 }
 
+BeginWriteFifoI64Response
+begin_write_fifo_i64(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginWriteFifoI64Request{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_timeout(timeout);
+
+  auto response = BeginWriteFifoI64Response{};
+
+  raise_if_error(
+      stub->BeginWriteFifoI64(&context, request, &response),
+      context);
+
+  return response;
+}
+
 WriteFifoI8Response
 write_fifo_i8(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const std::vector<pb::int32>& data, const pb::uint32& timeout)
 {
@@ -2224,6 +2539,25 @@ write_fifo_i8(const StubPtr& stub, const nidevice_grpc::Session& session, const 
 
   raise_if_error(
       stub->WriteFifoI8(&context, request, &response),
+      context);
+
+  return response;
+}
+
+BeginWriteFifoI8Response
+begin_write_fifo_i8(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginWriteFifoI8Request{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_timeout(timeout);
+
+  auto response = BeginWriteFifoI8Response{};
+
+  raise_if_error(
+      stub->BeginWriteFifoI8(&context, request, &response),
       context);
 
   return response;
@@ -2249,6 +2583,25 @@ write_fifo_sgl(const StubPtr& stub, const nidevice_grpc::Session& session, const
   return response;
 }
 
+BeginWriteFifoSglResponse
+begin_write_fifo_sgl(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginWriteFifoSglRequest{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_timeout(timeout);
+
+  auto response = BeginWriteFifoSglResponse{};
+
+  raise_if_error(
+      stub->BeginWriteFifoSgl(&context, request, &response),
+      context);
+
+  return response;
+}
+
 WriteFifoU16Response
 write_fifo_u16(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const std::vector<pb::uint32>& data, const pb::uint32& timeout)
 {
@@ -2264,6 +2617,25 @@ write_fifo_u16(const StubPtr& stub, const nidevice_grpc::Session& session, const
 
   raise_if_error(
       stub->WriteFifoU16(&context, request, &response),
+      context);
+
+  return response;
+}
+
+BeginWriteFifoU16Response
+begin_write_fifo_u16(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginWriteFifoU16Request{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_timeout(timeout);
+
+  auto response = BeginWriteFifoU16Response{};
+
+  raise_if_error(
+      stub->BeginWriteFifoU16(&context, request, &response),
       context);
 
   return response;
@@ -2289,6 +2661,25 @@ write_fifo_u32(const StubPtr& stub, const nidevice_grpc::Session& session, const
   return response;
 }
 
+BeginWriteFifoU32Response
+begin_write_fifo_u32(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginWriteFifoU32Request{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_timeout(timeout);
+
+  auto response = BeginWriteFifoU32Response{};
+
+  raise_if_error(
+      stub->BeginWriteFifoU32(&context, request, &response),
+      context);
+
+  return response;
+}
+
 WriteFifoU64Response
 write_fifo_u64(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const std::vector<pb::uint64>& data, const pb::uint32& timeout)
 {
@@ -2309,6 +2700,25 @@ write_fifo_u64(const StubPtr& stub, const nidevice_grpc::Session& session, const
   return response;
 }
 
+BeginWriteFifoU64Response
+begin_write_fifo_u64(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginWriteFifoU64Request{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_timeout(timeout);
+
+  auto response = BeginWriteFifoU64Response{};
+
+  raise_if_error(
+      stub->BeginWriteFifoU64(&context, request, &response),
+      context);
+
+  return response;
+}
+
 WriteFifoU8Response
 write_fifo_u8(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const std::vector<pb::uint32>& data, const pb::uint32& timeout)
 {
@@ -2324,6 +2734,25 @@ write_fifo_u8(const StubPtr& stub, const nidevice_grpc::Session& session, const 
 
   raise_if_error(
       stub->WriteFifoU8(&context, request, &response),
+      context);
+
+  return response;
+}
+
+BeginWriteFifoU8Response
+begin_write_fifo_u8(const StubPtr& stub, const nidevice_grpc::Session& session, const pb::uint32& fifo, const pb::uint32& timeout)
+{
+  ::grpc::ClientContext context;
+
+  auto request = BeginWriteFifoU8Request{};
+  request.mutable_session()->CopyFrom(session);
+  request.set_fifo(fifo);
+  request.set_timeout(timeout);
+
+  auto response = BeginWriteFifoU8Response{};
+
+  raise_if_error(
+      stub->BeginWriteFifoU8(&context, request, &response),
       context);
 
   return response;

@@ -315,9 +315,9 @@ ${populate_response(function_data=function_data, parameters=parameters)}\
   arg_string = service_helpers.create_args(non_streaming_function_parameters)
   output_parameters = [p for p in non_streaming_function_parameters if common_helpers.is_output_parameter(p)]
 %>\
-  ::grpc::Status ${moniker_function_name}(void* data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
+  ::grpc::Status ${moniker_function_name}(void* callback_data, google::protobuf::Arena& arena, google::protobuf::Any& packedData)
   {
-    ${struct_name}* function_data = static_cast<${struct_name}*>(data);
+    ${struct_name}* function_data = static_cast<${struct_name}*>(callback_data);
     auto library = function_data->library;
     auto response = &function_data->response;
 ${initialize_moniker_input_parameters(moniker_input_parameters)}\
